@@ -1,0 +1,34 @@
+h1.archive-title{
+    color: #03a43f; font-family: HelveticaNeueLTStd;  font-size: 33px; font-weight: bold; text-align: center; text-transform: uppercase;
+
+}
+div.archive-meta{
+    font-family: HelveticaNeueLTStd; font-size: 14px; text-align: center; font-size: 18px;
+}
+div.title_category_item{
+    color: #03a43f; font-family: HelveticaNeueLTStd;  font-size: 33px; font-weight: bold; text-align: left; text-transform: uppercase;
+    margin-top: 75px; margin-bottom: 30px;
+}
+table.mediatheque_grid{
+    width: 100%; border: none;
+}
+table.mediatheque_grid tr.header{
+    background: url(../images/mediatheque_header_bg.png);
+}
+table.mediatheque_grid tr.header th{
+    height: 42px; text-align: center; border: none; font-family: HelveticaNeueLTStd; font-size: 15px;
+}
+table.mediatheque_grid tr.header th.support{
+    width: 320px;
+}
+table.mediatheque_grid tr.header th.date, table.mediatheque_grid tr td.date{
+    border-left: 1px solid #a2a2a2;
+    border-right: 1px solid #a2a2a2;
+    text-align: center;
+    width: 120px;
+}
+table.mediatheque_grid tr td{
+    height: 75px; vertical-align: middle; padding-left: 20px;
+    border-bottom: 1px solid #a2a2a2;
+    font-family: HelveticaNeueLTStd; font-size: 15px;
+}

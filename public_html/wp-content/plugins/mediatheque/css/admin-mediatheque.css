@@ -1,0 +1,12 @@
+div.mediatheque-page-container{
+    text-align: left; padding-top: 10px;
+}
+a.mediatheque_page{
+    color: #005684; font-size: 14px; margin-right: 5px;
+}
+a.mediatheque_page:hover{
+    color: #0074a2; text-decoration: none;
+}
+a.page_selected{
+    color: #ccc; text-decoration: none;
+}
