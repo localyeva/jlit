@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="public_html"/>
+	<buildpathentry kind="lib" path="_/jlit_real_src (oldsrc).zip"/>
+	<buildpathentry kind="lib" path="_/jlit_real_src_08132015 (2).zip"/>
+	<buildpathentry kind="lib" path="_/jlitreal_db.sql.zip"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+</buildpath>
