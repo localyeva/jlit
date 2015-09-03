@@ -71,15 +71,15 @@ body {
   color: #ffffff;
 }
 .hei-menu {
-  padding-left: 10px;
+  padding-left: 230px;
   min-height: 30px;
 }
 /*End menu */
 /*slider */
 .format-stand {
-  left: 58%;
-  padding-bottom: 14%;
-  right: 10%;
+  left: 19%;
+  padding-bottom: 9%;
+  right: 48%;
   text-shadow: none;
   text-transform: uppercase;
   font-weight: bold;
@@ -159,7 +159,7 @@ h4 {
   max-width: 32%;
 }
 .add-info-active {
-  background-color: #f6a299;
+  background-color: #0586AD;
 }
 .add-info-mid {
   background-color: #ffffff;
@@ -167,7 +167,7 @@ h4 {
   margin-left: 20px;
 }
 .add-info-mid:hover {
-  background-color: #f6a299;
+  background-color: #0586AD;
 }
 .add-info-none {
   min-height: 170px;
@@ -176,17 +176,17 @@ h4 {
   background-color: #ffffff;
 }
 #add_right:hover {
-  background-color: #f6a299;
+  background-color: #0586AD;
 }
-.regis-blue {
-  background-color: #00baf2;
-  border-color: #00baf3;
+.regis-red {
+  background-color: #bf1e2e;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 20px;
-  min-width: 170px;
+  min-width: 270px;
 }
+/* Limit practice */
 .content {
   padding-left: 0px;
   padding-right: 0px;
@@ -204,11 +204,18 @@ h4 {
 .bag-gray {
   background-color: #f2f2f2;
 }
+.bag-red {
+  background-color: #bf1e2e;
+}
 .learn-content {
   padding-top: 50px;
   padding-bottom: 30px;
-  max-width: 600px;
+  max-width: 500px;
   margin-left: 335px;
+}
+.no-mar {
+  margin-left: -5px;
+  margin-right: -5px;
 }
 .none-padd {
   padding-left: 5px;
@@ -238,26 +245,50 @@ h4 {
   text-justify: inter-word;
   min-height: 220px;
 }
+.intro-title {
+  background-color: #f1f1f1;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.intro-title a {
+  color: #bf1e2e;
+  font-weight: bold;
+  font-size: 18px;
+}
+.bo-intro {
+  background-color: #e5e5e5;
+  padding: 7% 27%;
+  height: 283px;
+}
+/* END Limit practice */
+/*JLIT Free */
 .a-register h2 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 50px;
+  color: #ffffff;
 }
 .a-register a {
-  background-color: #bf1e2e;
+  background-color: #ab2929;
   color: #ffffff;
-  padding: 15px 40px 15px 40px;
+  padding: 5px 50px;
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  margin-left: 170px;
+  border: 3px solid #e79c9c;
+  border-radius: 5px;
+}
+.a-register img {
+  width: 30px;
 }
 .text-format {
   text-align: justify;
   text-justify: inter-word;
 }
-
+/* End JLIT Free */
+/*Footer */
 .footer-top {
   background-color: #dadada;
   padding-top: 120px;
@@ -274,6 +305,7 @@ h4 {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+/*END Footer */
 /*--------------------------------------------------------------------- import*/
 @media (max-width: 480px) {
   .container {
@@ -282,6 +314,9 @@ h4 {
   }
   .navbar-header {
     display: block;
+  }
+  .hei-menu {
+    padding-left: 0px;
   }
   .add-info-mid {
     background-color: #ffffff;
@@ -402,11 +437,10 @@ h4 {
     display: none;
   }
   .format-stand {
-    max-width: 65%;
-    left: 50%;
+    max-width: 41%;
+    left: 10%;
     right: 0px;
     text-shadow: none;
-    padding-bottom: 3px;
     font-size: 5px;
   }
   .format-stand h4 {
@@ -448,6 +482,7 @@ h4 {
 @media (min-width: 768px) and (max-width: 991px) {
   .hei-menu {
     font-size: 13px;
+    padding-left: 0px;
   }
   .navbar-nav > li:not(:last-child) {
     margin-right: 0px;
@@ -465,7 +500,7 @@ h4 {
   }
   .format-stand {
     padding-bottom: 0px;
-    left: 55%;
+    left: 15%;
   }
   .format-stand h4 {
     font-size: 17px;
@@ -474,7 +509,7 @@ h4 {
     font-size: 13px;
   }
   .format-stand a {
-    font-size: 13px;
+    font-size: 10px;
   }
   .add-info {
     min-height: 200px;
@@ -504,7 +539,7 @@ h4 {
 }
 @media (min-width: 1200px) and (max-width: 1300px) {
   .format-stand {
-    left: 57%;
+    left: 14%;
     padding-bottom: 5%;
   }
   .format-stand h4 {
