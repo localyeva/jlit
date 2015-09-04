@@ -207,7 +207,7 @@ h4 {
   color: #ffffff;
 }
 .regis-red {
-  background-color: #bf1e2e;
+  background-color: #C00000;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
@@ -216,6 +216,9 @@ h4 {
   min-height: 70px;
   margin: 17px;
 }
+.regis-red:hover {
+    color: #ffffff;
+  }
 /* Limit practice */
 .content {
   padding-left: 0px;
