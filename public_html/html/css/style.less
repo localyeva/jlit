@@ -9,9 +9,19 @@
 
 body{
 	background: @color-white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
 }
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+	font-family: 'Roboto', sans-serif;
+}
+
 .mar-t-10{
 	margin-top:10px;
+}
+.padd-t-30{
+	padding-top:30px;
 }
 .mar-t-20{
 	margin-top:20px;
@@ -34,7 +44,9 @@ body{
 .mar-bt-50{
 	margin-bottom: 50px;
 }
-
+.mar-bt-100{
+	margin-bottom:100px;
+}
 .container-fluid{
 	max-width:100%;
 	padding-left:0px;
@@ -54,6 +66,7 @@ body{
     margin-top: 6.75px;
     padding-bottom: 7.25px;
     padding-top: 7.25px;
+    font-family: 'Roboto', sans-serif;
 }
 .navbar-default {
     background-color: @color-red;
@@ -85,15 +98,15 @@ body{
 /*slider */
 
 .format-stand {
-	left: 19%;
+	left: 17%;
     padding-bottom: 9%;
-    right:48%;
+    right:50%;
     text-shadow: none;
 	text-transform: uppercase;
-	font-weight: bold;
 	h4{
-		font-size: 34px; 
+		font-size: 40px; 
 		color:@color-red;
+		font-weight: bold;
 	}
 	p{
 		color: #000000;
@@ -103,8 +116,8 @@ body{
 		background-color: #383334;
 		color:@color-white;
 		padding: 10px 30px;
-		
-		
+		font-weight: bold;
+		text-decoration: none;
 	}
 }
 /*end slider */
@@ -162,7 +175,7 @@ h4{
 }
 .time-class-active{
 	color: @color-white;
-	background-color: #0586ad;
+	background-color: #1A9BC1;
 }
 
 .add-info{
@@ -171,7 +184,8 @@ h4{
 	max-width: 32%;
 }
 .add-info-active{
-	background-color: #0586AD;
+	background-color: #1A9BC1;
+	color: #ffffff;
 }
 .add-info-mid{
 	background-color: @color-white;
@@ -193,8 +207,10 @@ h4{
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 20px;
-    min-width: 270px;
+    font-size: 35px;
+    min-width: 513px;
+    min-height: 70px;
+    margin: 17px;
 }
 
 
@@ -210,10 +226,9 @@ h4{
 	color: @color-red;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 39px;
 }
 .question-right{
-	padding-top: 90px;
 	padding-left: 90px;
 }
 
@@ -226,8 +241,20 @@ h4{
 .learn-content{
 	padding-top:50px;
 	padding-bottom:30px;
-	max-width: 500px;
-	margin-left: 335px;
+	img{
+		margin-bottom: 15px;
+		width:75px;
+		height:75px;
+	}
+	.right{
+		text-align:right;
+		padding-right:25px;
+		img{
+			margin-right:33px;
+			
+		}
+
+	}
 }
 .no-mar{
 	margin-left: -5px;
@@ -274,32 +301,37 @@ h4{
 }
 .bo-intro{
 	background-color: #e5e5e5;
-	padding: 7% 27%;
-	height: 283px;
+	padding: 11% 27%;
+	height: 241px;
+	img{
+		height:170px;
+	}
 }
 /* END Limit practice */
 
 /*JLIT Free */
 .a-register{
+	height: 560px;
+	padding-top: 145px;
 	h2{
-		font-size: 30px;
+		font-size: 45px;
 		font-weight: bold;
-		margin-bottom: 50px;
+		margin-bottom: 65px;
 		color: @color-white;
 	}
 	a{
 		background-color: #ab2929;
 		color: @color-white;
-		padding: 5px 50px;
-		font-size: 30px;
+		padding: 15px 160px;
+		font-size: 40px;
 		font-weight: bold;
 		text-transform: uppercase;
 		text-decoration:none;
-		border: 3px solid #e79c9c;
+		border: 5px solid #e79c9c;
 		border-radius: 5px;
 	}
 	img{
-		width: 30px;
+		width: 40px;
 	}
 }
 
@@ -317,6 +349,16 @@ h4{
 	padding-bottom:120px;
 	padding-left: 0px;
 	padding-right:0px;
+	.img-right{
+			margin-left: 250px;
+		}
+	.txt-cent{
+		margin-top:53px;
+		padding-left: 67px;
+		p{
+			margin-top:10px;
+		}
+	}
 }
 .pad-t-70{
 	padding-top:70px;
