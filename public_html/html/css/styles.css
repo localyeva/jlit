@@ -164,7 +164,7 @@ h6 {
   background-color: #1A9BC1;
 }
 .time-class2 {
-  background-color: #0586ad;
+  background-color: #ffffff;
   margin-bottom: -10px;
   padding-left: 15px;
   min-height: 70px;
@@ -182,25 +182,19 @@ h4 {
   min-height: 170px;
   padding-top: 35px;
   max-width: 32%;
+  background-color: #ffffff;
 }
 .add-info-active {
   background-color: #1A9BC1;
   color: #ffffff;
 }
 .add-info-mid {
-  background-color: #ffffff;
   margin-right: 20px;
   margin-left: 20px;
 }
 .add-info-mid:hover {
   background-color: #1A9BC1;
   color: #ffffff;
-}
-.add-info-none {
-  min-height: 170px;
-  padding-top: 35px;
-  max-width: 32%;
-  background-color: #ffffff;
 }
 #add_right:hover {
   background-color: #1A9BC1;
@@ -217,8 +211,8 @@ h4 {
   margin: 17px;
 }
 .regis-red:hover {
-    color: #ffffff;
-  }
+  color: #ffffff;
+}
 /* Limit practice */
 .content {
   padding-left: 0px;

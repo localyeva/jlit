@@ -9,8 +9,49 @@
 <script src="js/jquery.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <!-- <link rel="stylesheet/less" type="text/css" href="css/style.less" />
-<script src="js/less.min.js" type="text/javascript"></script>-->
-<link rel="stylesheet"  type="text/css" href="css/styles.css" /> 
+<script src="js/less.min.js" type="text/javascript"></script> --> 
+<link rel="stylesheet"  type="text/css" href="css/styles.css" />
+<script>
+  $( document ).ready(function() {
+	  $( "#class1" ).click(function() {
+		  $( "#class" ).val(1);
+		  $( "#class1" ).addClass('time-class-active');
+		  $( "#class2" ).removeClass("time-class-active");
+		  $( "#class3" ).removeClass("time-class-active");
+		});
+	  $( "#class2" ).click(function() {
+		  $( "#class" ).val(2);
+		  $( "#class2" ).addClass("time-class-active");
+		  $( "#class1" ).removeClass("time-class-active");
+		  $( "#class3" ).removeClass("time-class-active");
+		});
+	  $( "#class3" ).click(function() {
+		  $( "#class" ).val(3);
+		  $( "#class3" ).addClass("time-class-active");
+		  $( "#class2" ).removeClass("time-class-active");
+		  $( "#class1" ).removeClass("time-class-active");
+		});
+	  
+	  $( "#room1" ).click(function() {
+		  $( "#room" ).val(1);
+		  $( "#room1" ).addClass('add-info-active');
+		  $( "#room2" ).removeClass("add-info-active");
+		  $( "#room3" ).removeClass("add-info-active");
+		});
+	  $( "#room2" ).click(function() {
+		  $( "#room" ).val(2);
+		  $( "#room2" ).addClass("add-info-active");
+		  $( "#room3" ).removeClass("add-info-active");
+		  $( "#room1" ).removeClass("add-info-active");
+		});
+	  $( "#room3" ).click(function() {
+		  $( "#room" ).val(3);
+		  $( "#room3" ).addClass("add-info-active");
+		  $( "#room1" ).removeClass("add-info-active");
+		  $( "#room2" ).removeClass("add-info-active");
+		});
+  });
+</script>
 </head>
 <body>
 	<div>
@@ -120,31 +161,33 @@
 							</div>
 						</div>
 						<div class="row mar-bt-50 mar-r-1">
-							<div class="time-class2 time-class-active">
+							<input type="hidden" id="class" name="class">
+							<div id="class1" class="time-class2 time-class-active">
 								<h4>JI3 (Sơ cấp): 8:30- 10:30</h4>
 								<span class="sp-active">JI3 (Sơ cấp): 8:30- 10:30</span>
 							</div>
-							<div class="time-class1">
+							<div id="class2" class="time-class1">
 								<h4>JI3 (Sơ cấp): 8:30- 10:30</h4>
 								<span>JI3 (Sơ cấp): 8:30- 10:30</span>
 							</div>
-							<div class="time-class">
+							<div id="class3" class="time-class">
 								<h4>JI3 (Sơ cấp): 8:30- 10:30</h4>
 								<span>JI3 (Sơ cấp): 8:30- 10:30</span>
 							</div>
 						</div>
 						<div class="row text-center mar-bt-20">
-							<div id="add_left" class="col-sm-4 add-info add-info-active">
+							<input type="hidden" name="room" id="room">
+							<div id="room1" class="col-sm-4 add-info add-info-active">
 								<img alt="" src="images/location.png">
 								<strong> TP.HCM: <br> Văn Phòng VietnamWorks</strong><br>
 								130 Sương Nguyệt Ánh, <br>P.Bến Thành, Q1
 							</div>
-							<div id="add_mid" class="col-sm-4 add-info add-info-mid">
+							<div id="room2"class="col-sm-4 add-info add-info-mid">
 								<img alt="" src="images/location.png">
 								<strong> Hà Nội: <br> Văn Phòng VietnamWorks</strong><br>
 								125-127 Bà Triệu, P.Nguyễn Du,<br> Quận Hai Bà Trưng
 							</div>
-							<div id="add_right" class="col-sm-4 add-info-none">
+							<div id="room3" class="col-sm-4 add-info">
 								<img alt="" src="images/location.png">
 								<strong> Đà Nẵng: <br> TBA</strong><br>
 								XXX
