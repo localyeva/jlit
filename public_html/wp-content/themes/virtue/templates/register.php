@@ -1,151 +1,120 @@
 <?php $lang = $_SESSION['lang']; ?>
-<?php session_start(); ?>
-<div class="container npad-l0" id="bm">	
-	<div class="col-md-12 main-title" id="register-section">			
-		<?php echo $lang['m_register']; ?>
-	</div>
-	<?php if(isset($_SESSION['register']) != 1) { ?>
-	<div class="container npad-l0 npad-r0">		
-		<section id="main">				
-			<section role="content" id="content">
-				<section class="form col-md-10">
-					<form role="form" class="form-horizontal" id="register" action="<?php bloginfo('siteurl') ?>?json=register" method="POST" >						
-						<div class="form-group">
-							<label for="id_number" class="col-md-3 control-label"><?php echo $lang['m_id_number']; ?></label>
-							<div class="col-md-9">
-								<input type="text" name="id_number" class="form-control required" placeholder="ID number">
+<div id="form-register" class="container-fluid">
+			<div>
+				<img class="img-responsive" style="width: 100%" src="<?php bloginfo('template_url'); ?>/assets/img/vir/bg1.png" alt="">
+			</div>
+			<h1 class="text-center regis">Đăng ký dự thi miễn phí</h1>
+				<div class="container bg1 mar-bt-100">
+					<form class="form-horizontal" role="form" id="register" action="<?php bloginfo('siteurl') ?>?json=register" method="POST">
+						<div class="row mar-bt-20">
+							<div class="col-md-6 col-xs-12">
+	  							<div class="form-group">
+									<input id="fullname" name="fullname" type="text" class="form-control" placeholder="Họ Tên" aria-describedby="basic-addon1">
+								</div>
+								<div class="form-group">
+									<input id="dob" name="dob" type="text" class="form-control" placeholder="Ngày sinh" aria-describedby="basic-addon1">
+								</div>
+								<div class="form-group">
+									<input id="email" name="email" type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+								</div>
+								<div class="form-group">
+									<input id="address" name="address" type="text" class="form-control" placeholder="Địa chỉ" aria-describedby="basic-addon1">
+								</div>
 							</div>
-						</div>						
-						<div class="form-group">
-							<label for="fullname" class="col-md-3 control-label"><?php echo $lang['m_full_name']; ?></label>
-							<div class="col-md-9">
-								<input type="text" name="fullname" class="form-control required" placeholder="<?php echo $lang['m_full_name']; ?>">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="dob" class="col-md-3 control-label"><?php echo $lang['m_date_of_birth']; ?></label>
-							<div class="col-md-8">
-								<input type="text"  id="dob" name="dob" class="form-control required">
-							</div>
-							<div class="col-md-3">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="gender" class="col-md-3 control-label"><?php echo $lang['m_gender']; ?></label>
-							<div class="col-md-9">
-								<label class="radio-inline">
-									<input name="gender" checked value="Male" type="radio"><?php echo $lang['m_male']; ?>
-								</label>
-								<label class="radio-inline">
-									<input name="gender"  value="Female" type="radio"><?php echo $lang['m_female']; ?>
-								</label>
+							<div class="col-md-6 col-xs-12">
+								<div class="form-group">
+									<input id="id_number" name="id_number" type="text" class="form-control" placeholder="Số CMND" aria-describedby="basic-addon1">
+								</div>
+								<div class="form-group mar-bt-23">
+									<label class="radio-inline">Giới tính:</label>
+									<label class="radio-inline"><input type="radio" name="gender" checked="checked" value="Male">Nam</label>
+									<label class="radio-inline"><input type="radio" name="gender" value="Female">Nữ</label>
+								</div>
+								<div class="form-group">
+									<input id="cellphone" name="cellphone" type="text" class="form-control" placeholder="Điện thoại" aria-describedby="basic-addon1">
+								</div>
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="email" class="col-md-3 control-label"><?php echo $lang['m_email']; ?></label>
-							<div class="col-md-9">
-								<input type="text" name="email" class="form-control required email" placeholder="<?php echo $lang['m_email']; ?>">
+						<div class="row mar-bt-50 mar-r-1">
+							<input type="hidden" id="class" name="test_level" value="1">
+							<div id="class3" class="time-class2 time-class-active">
+								<h4><?php echo $lang['m_test_level_i3']; ?></h4>
+								<span><?php echo $lang['m_test_level_i3']; ?></span>
+							</div>
+							<div id="class2" class="time-class1">
+								<h4><?php echo $lang['m_test_level_i2']; ?></h4>
+								<span><?php echo $lang['m_test_level_i2']; ?></span>
+							</div>
+							<div id="class1" class="time-class">
+								<h4><?php echo $lang['m_test_level_i1']; ?></h4>
+								<span><?php echo $lang['m_test_level_i1']; ?></span>
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="cellphone" class="col-md-3 control-label"><?php echo $lang['m_cell_phone']; ?></label>
-							<div class="col-md-9">
-								<input type="text"  name="cellphone" class="form-control required NumbersOnly" placeholder="Dien thoai">
+						<div class="row text-center mar-bt-20">
+							<input type="hidden" name="location" id="room" value="1">
+							<div id="room1" class="col-sm-4 add-info add-info-active">
+								<img alt="" src="images/location.png">
+								<strong> TP.HCM: <br> Văn Phòng VietnamWorks</strong><br>
+								130 Sương Nguyệt Ánh, <br>P.Bến Thành, Q1
+							</div>
+							<div id="room2"class="col-sm-4 add-info add-info-mid">
+								<img alt="" src="images/location.png">
+								<strong> Hà Nội: <br> Văn Phòng VietnamWorks</strong><br>
+								125-127 Bà Triệu, P.Nguyễn Du,<br> Quận Hai Bà Trưng
+							</div>
+							<div id="room3" class="col-sm-4 add-info">
+								<img alt="" src="images/location.png">
+								<strong> Đà Nẵng: <br> TBA</strong><br>
+								XXX
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="address" class="col-md-3 control-label"><?php echo $lang['m_user_address']; ?></label>
-							<div class="col-md-9">
-								<input type="text" name="address" class="form-control required" placeholder="Dia chi">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="location" class="col-md-3 control-label"><?php echo $lang['m_location']; ?></label>
-							<div class="col-md-9">
-								<label class="radio-inline">
-									<input id="loc-hcm" name="location" checked value="<?php echo HCMLOCATION ?>" type="radio"><?php echo $lang['m_tphcm']; ?>
-								</label>
-								<label class="radio-inline">
-									<input id="loc-hn" name="location"  value="<?php echo HANOILOCATION ?>" type="radio"><?php echo $lang['m_hanoi']; ?>
-								</label>
-							</div>
-						</div>		
-
-
-						
-						<div class="form-group">
-                                                        <label for="level_test" class="col-md-3 control-label"><?php echo $lang['m_test_level']; ?></label>
-                                                        <div class="form-group">
-                                                                <div class="col-md-8">
-                                                                        <label class="radio-inline">
-                                                                                <input name="test_level" checked value="<?php echo TEST_LEVEL_I1; ?>" type="radio"><?php echo $lang['m_test_level_i1']; ?>
-                                                                        </label>
-                                                                </div>
-                                                        </div>
-							<div class="form-group">
-                                                        <label class="col-md-3 control-label">&nbsp;</label>
-                                                                <div class="col-md-8"><span style="font-size:14px;color:red; font-style:italic;"><?php echo $lang['m_test_level_expired']; ?></span>
-                                                                <br/>
-                                                                <span style="text-decoration: line-through;">
-                                                                                <?php echo $lang['m_test_level_i2']; ?>,&nbsp;
-                                                                                <?php echo $lang['m_test_level_i3']; ?></span>
-                                                                </div>
-
-                                                        </div>
-                                                </div>	
-						<div class="form-group">
-							<label for="dob" class="col-md-3 control-label">&nbsp;</label>
-							<div class="col-md-8">
-								<?php echo $lang['m_register_sucess_comment']; ?>
-							</div>
-							<div class="col-md-3">
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-md-offset-9 col-md-3 ">								
-								<button type="submit" class="btn btn-default pull-right" id="register-button"><?php echo $lang['m_register']; ?></button>								
-							</div>
+						<div class="text-center">
+							<button id="bt_submit" type="button" class="btn active regis-red"> Đăng ký  <img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arr.png"></button>
 						</div>
 					</form>
-				</section>
-			</section>
-		</section>	
-	</div>
-
-	<?php }else{ ?>
-	<div class="container npad-l0 npad-r0">
-		<b>
-		<?php echo $lang['m_thank_you']; ?><br/>
-		<?php echo $lang['m_contact_later']; ?>		
-		</b>
-		<?php if($_SESSION['new_member'] == 1){ ?>
-			<div class="news-member" style="">Bạn đã được cấp một tài khoản trên trang tuyển dụng vietnamworks.com dựa trên thông tin đăng ký dự thi
-			<br />Bạn vui lòng kiểm tra email để kích hoạt và sử sụng tài khoản trên vietnamworks.com.
-
 			</div>
-		<?php } ?>
-		<br /><br /><br /><a href="/"><input type="button" value="<?php echo $lang['m_home_page']; ?>" style="padding:3px;"/></a><br /><br /><br />
-		
-	</div>
-		<?php unset($_SESSION['register']); ?>
-	<?php } ?>		
-</div>
+		</div>
 <script type="text/javascript">
-	$(document).ready(function(){
-		$('#loc-hn').click(function(){
-			$('#hn').fadeIn(2000);
-			$('#hcm').fadeOut(1);
-		});
+$('#bt_submit').on('click', function() {
+	$.ajax({
+		url: '<?php bloginfo('siteurl') ?>?json=register',
+		type: 'post',
+		data: $('#register input[type=\'text\'], #register input[type=\'hidden\'], #product input[type=\'radio\']:checked'),
+		dataType: 'json',
+		beforeSend: function() {
+			$('#bt_submit').button('loading');
+		},
+		complete: function() {
+			$('#bt_submit').button('reset');
+		},
+		success: function(json) {
+			$('.show-error').remove();
+			$('.form-group').removeClass('has-error');
 
-		$('#loc-hcm').click(function(){
-			$('#hcm').fadeIn(2000);
-			$('#hn').fadeOut(1);
-		});
-
+			if (json['error']) {
+				if(json['error']['er_fullname']){
+					$('#fullname').after('<div class="show-error">' + json['error']['er_fullname'] + '</div>');
+				}
+				if(json['error']['er_email']){
+					$('#email').after('<div class="show-error">' + json['error']['er_email'] + '</div>');
+				}
+				if(json['error']['er_dob']){
+					$('#dob').after('<div class="show-error">' + json['error']['er_dob'] + '</div>');
+				}
+				if(json['error']['er_address']){
+					$('#address').after('<div class="show-error">' + json['error']['er_address'] + '</div>');
+				}
+				if(json['error']['er_id_number']){
+					$('#id_number').after('<div class="show-error">' + json['error']['er_id_number'] + '</div>');
+				}
+				if(json['error']['er_cellphone']){
+					$('#cellphone').after('<div class="show-error">' + json['error']['er_cellphone'] + '</div>');
+				}
+			}
+			if (json['success']) {
+				$('#register').before('<div class="success">' + json['success'] + '</div>');
+			}
+		}
 	});
-</script>
-<script type="text/javascript">
-	$('#register-button').on('click', function() {
-	  ga('send', 'event', 'button', 'click', 'nav-buttons');
-	});
+});
 </script>
