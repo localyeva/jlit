@@ -322,11 +322,9 @@ h4 {
 .bo-intro {
   background-color: #e5e5e5;
   padding: 11% 27%;
-  height: 241px;
+  height: 277px;
 }
-.bo-intro img {
-  height: 170px;
-}
+
 /* END Limit practice */
 /*JLIT Free */
 .a-register {
@@ -398,48 +396,42 @@ h4 {
     width: 870px;
 }
 
-/*menu hide*/
-
-#nav-fmenu{
-    opacity: 0.8;
-    top:0px;
-}
-
-#nav-fmenu a:hover a:visited a:active{
-	color:#ffffff;
-}
-#nav-fmenu a:visited{
-	color:#ffffff;
-}
-#nav-fmenu a:active{
-	color:#ffffff;
-	}
-.nav-fmenu{
+.scroll-top-wrapper {
     position: fixed;
-    min-height: 37px;
-    width:100%;    
-    max-width: 1170px;
-    z-index: 100;        
-    background-color: #383838;
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+	text-align: center;
+	z-index: 99999999;
+    background-color: #777777;
+	color: #eeeeee;
+	width: 50px;
+	height: 48px;
+	line-height: 48px;
+	right: 30px;
+	bottom: 30px;
+	padding-top: 2px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
-.nav-fmenu .nav-fmenu-w{    
-    color:#fff;
-    font-weight: bold;
+.scroll-top-wrapper:hover {
+	background-color: #888888;
 }
-.nav-fmenu .nav-fmenu-w .item{
-    padding: 5px 20px 5px 20px;
-    float: left;
+.scroll-top-wrapper.show {
+    visibility:visible;
+    cursor:pointer;
+	opacity: 1.0;
 }
-.mo-item:hover{cursor: pointer; background-color: #ccc;}
-.icon-reorder{cursor:pointer;}
-
-.nav-fmenu .nav-fmenu-w .item:hover{
-    cursor: pointer;    
+.scroll-top-wrapper i.fa {
+	line-height: inherit;
 }
-
-/*end menu hide*/
-
-
 
 
 .footer-botton {
@@ -454,6 +446,9 @@ h4 {
   .container {
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .bo-intro {
+    height: 230px;
   }
   .navbar-collapse {
     padding-left: 15px;
@@ -570,6 +565,9 @@ h4 {
   .footer-top .pad-t-70 {
     padding-top: 50px;
   }
+  .modal-dialog {
+    width: 339px;
+}
 }
 @media (max-device-width: 480px) {
   .add-info-mid {
@@ -577,6 +575,12 @@ h4 {
     margin-right: 12px;
     margin-left: 12px;
   }
+   .bo-intro {
+    height: 250px;
+  }
+  .modal-dialog {
+    width: 339px;
+}
   .question-right {
     padding-top: 0px;
     padding-left: 78px;

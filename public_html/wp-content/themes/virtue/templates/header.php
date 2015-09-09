@@ -1,5 +1,12 @@
 <?php  $lang = $_SESSION['lang'];?>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<div class="scroll-top-wrapper ">
+	<span class="scroll-top-inner">
+		<i class="fa fa-2x fa-arrow-circle-up"></i>
+	</span>
+</div>
+
 	<div>
 		<div id="header">
 			<div class="container">
@@ -16,28 +23,6 @@
 			</div>
 			<div id="note" class="container-fluid">
 					<nav class="navbar navbar-default navbar-static hei-menu" id="myNavbar" >
-						<div class="container mar-r">
-						 	<div class="nav-fmenu  ip-smar" id="nav-fmenu">
-						 		<div class="navbar-header">
-						          <button data-target=".nav-fmenu-w" data-toggle="collapse" type="button" class="navbar-toggle  collapsed ">
-						            <span class="sr-only">Toggle navigation</span>
-						            <span class="icon-bar"></span>
-						            <span class="icon-bar"></span>
-						            <span class="icon-bar"></span>
-						          </button>
-						          <p class="navbar-brand" data-target=".nav-fmenu-w">Menu</p>
-						        </div>
-								<div class="nav-fmenu-w navbar-collapse dis-hide collapse" aria-expanded="false">
-									<div class="item f-l menu-l"><a href="#header"> <?php echo $lang['m_home_page']; ?></a></div>
-									<div class="item f-l menu-l"> <a href="#form-register">  Đăng ký </a> </div>
-									<div class="item f-l menu-l"><a href="#what-jlit">  <?php echo $lang['m_what_is_jlit']; ?></a></div>
-									<div class="item f-l menu-l"> <a href="#content"><?php echo $lang['m_policy_scope']; ?></a></div>					
-									<div class="item f-l menu-l"> <?php echo $lang['m_awards']; ?> </div>
-									<div class="item f-l menu-l"> <?php echo $lang['m_jlit_news']; ?></div>		
-									<div class="item f-l menu-l"> <a href="#message"><?php echo $lang['m_voice']; ?></a></div>					
-								</div>
-							</div>
-						</div>
 				      <div class="container">
 				        <div class="navbar-header">
 				          <button data-target=".bs-example-js-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
@@ -62,12 +47,13 @@
 				            <li class="dropdown">
 				              <a href="#content"> <?php echo $lang['m_policy_scope']; ?> </a>
 				            </li>
-				            <li class="dropdown">
-				              <a ><?php echo $lang['m_awards']; ?> </a>
+				           <!-- <li class="dropdown">
+				              <a ><?php //echo $lang['m_awards']; ?> </a>
 				            </li>
 				            <li class="dropdown">
-				              <a > <?php echo $lang['m_jlit_news']; ?> </a>
+				              <a > <?php //echo $lang['m_jlit_news']; ?> </a>
 				            </li>
+				             -->
 				            <li>
 				              <a href="#message"> <?php echo $lang['m_voice']; ?></a>
 				            </li>
