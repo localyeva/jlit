@@ -89,7 +89,7 @@ $('#bt_submit').on('click', function() {
 		},
 		success: function(json) {
 			$('.show-error').remove();
-			$('.form-group').removeClass('has-error');
+			$('.success').remove();
 
 			if (json['error']) {
 				if(json['error']['er_fullname']){
