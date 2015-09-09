@@ -5,7 +5,7 @@
 			<div class="container">
 				<div class="row mar-bt-20 mar-t-20">
 					<div class="col-sm-8"><a href="<?php echo home_url(); ?>/">
-						<?php global $virtue; if (!empty($virtue['x1_virtue_logo_upload']['url'])) { ?> <div id="thelogo"><img src="<?php echo esc_url($virtue['x1_virtue_logo_upload']['url']); ?>" alt="<?php  bloginfo('name');?>" class="kad-standard-logo flogo-m jlit-logo" />
+						<?php global $virtue; if (!empty($virtue['x1_virtue_logo_upload']['url'])) { ?> <div id="thelogo"><img src="<?php echo esc_url($virtue['x1_virtue_logo_upload']['url']); ?>" alt="<?php  bloginfo('name');?>" class="kad-standard-logo flogo-m jlit-logo img-responsive" />
                          <?php if(!empty($virtue['x2_virtue_logo_upload']['url'])) {?> 
                          <img src="<?php echo esc_url($virtue['x2_virtue_logo_upload']['url']);?>" class="kad-retina-logo jlit-logo" style="max-height:<?php echo $virtue['x1_virtue_logo_upload']['height'];?>px" /> <?php } ?>
                         </div> <?php } else { bloginfo('name'); } ?>
@@ -16,9 +16,18 @@
 			</div>
 			<div id="note" class="container-fluid">
 					<nav class="navbar navbar-default navbar-static hei-menu" id="myNavbar" >
-						<div class="container">
-						 	<div class="nav-fmenu" id="nav-fmenu">
-								<div class="nav-fmenu-w">
+						<div class="container mar-r">
+						 	<div class="nav-fmenu  ip-smar" id="nav-fmenu">
+						 		<div class="navbar-header">
+						          <button data-target=".nav-fmenu-w" data-toggle="collapse" type="button" class="navbar-toggle  collapsed ">
+						            <span class="sr-only">Toggle navigation</span>
+						            <span class="icon-bar"></span>
+						            <span class="icon-bar"></span>
+						            <span class="icon-bar"></span>
+						          </button>
+						          <p class="navbar-brand" data-target=".nav-fmenu-w">Menu</p>
+						        </div>
+								<div class="nav-fmenu-w navbar-collapse dis-hide collapse" aria-expanded="false">
 									<div class="item f-l menu-l"><a href="#header"> <?php echo $lang['m_home_page']; ?></a></div>
 									<div class="item f-l menu-l"> <a href="#form-register">  Đăng ký </a> </div>
 									<div class="item f-l menu-l"><a href="#what-jlit">  <?php echo $lang['m_what_is_jlit']; ?></a></div>

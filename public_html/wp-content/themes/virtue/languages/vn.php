@@ -2,11 +2,11 @@
 	$lang['m_home_page'] = "Trang chủ";
 	$lang['m_what_is_jlit'] = "JLIT là gì";
 	$lang['m_jlit_news'] = "Tin tức";
-	$lang['m_policy_scope'] = "Nội dung và phạm vi của bài thi JLIT";
+	$lang['m_policy_scope'] = "Nội dung bài thi";
 	$lang['m_policy'] = "Cơ chế thi";
 	$lang['m_scope'] = "Phạm vi thi";
 
-	$lang['m_awards'] = "Giải thưởng";
+	$lang['m_awards'] = "Quyền lợi";
 	$lang['m_voice'] = "Thông điệp";
 
 	$lang['m_test_date_registration'] = "Ngày test & Đăng ký";
@@ -106,8 +106,9 @@
 	$lang['m_venue_add'] = "130 Sương Nguyệt Ánh, Bến Thành, Quận 1, Tp.Hồ Chí Minh";
 
 
-	$lang['m_tphcm'] = "Hồ Chí Minh";
-	$lang['m_hanoi'] = "Hà Nội";
+	$lang['m_tphcm'] = "<strong> TP.HCM: <br> Văn Phòng VietnamWorks</strong><br>130 Sương Nguyệt Ánh, <br>P.Bến Thành, Q1";
+	$lang['m_hanoi'] = "<strong> Hà Nội: <br> Văn Phòng VietnamWorks</strong><br>125-127 Bà Triệu, P.Nguyễn Du,<br> Quận Hai Bà Trưng";
+	$lang['m_dn']="<strong> Đà Nẵng: <br> TBA</strong><br> XXX";
 
 	$lang['m_you_register_test_level'] = "Bạn đăng ký kiểm tra trình độ nào ?";
 	$lang['m_test_level_i1'] = "JI1(Cao cấp) :14:00~15:50";

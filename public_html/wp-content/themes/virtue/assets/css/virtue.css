@@ -130,6 +130,7 @@ h6 {
   font-size: 40px;
   color: #bf1e2e;
   font-weight: bold;
+  line-height: 53px;
 }
 .format-stand p {
   color: #000000;
@@ -141,6 +142,9 @@ h6 {
   padding: 10px 30px;
   font-weight: bold;
   text-decoration: none;
+}
+.format-stand img {
+	margin-top: 23px;
 }
 /*end slider */
 .bg1 {
@@ -523,15 +527,30 @@ h4 {
   }
   .format-stand h4 {
     font-size: 7px;
+    line-height: 9px;
+    margin-bottom: auto;
+  }
+  .ip-smar{
+  	margin-left: -11px;
+  }
+  .ip-smar button{
+  	margin-top: 13px;
+  }
+  .ip-smar p{
+  	height:35px;
+  	padding: 13px 15px;
   }
   .format-stand p {
     color: #000000;
-    margin-bottom: 7px;
+    margin-bottom: 0px;
   }
   .format-stand a {
     background-color: #383334;
     padding: 2px 3px;
   }
+  .format-stand img {
+	margin-top: 0px;
+}
   .learn-content {
     margin-left: 0px;
     padding-left: 0px;
@@ -600,7 +619,7 @@ h4 {
   }
   .format-stand p {
     color: #000000;
-    margin-bottom: 7px;
+    margin-bottom: 0px;
   }
   .format-stand a {
     background-color: #383334;
@@ -666,6 +685,12 @@ h4 {
     .navbar-collapse {
     padding-left: 5px;
 }
+.mar-r{
+	margin-right: 22%;
+}
+.ip-smar{
+	width: 950px;
+}
   .navbar-nav > li:not(:last-child) {
     margin-right: 0px;
   }
@@ -688,7 +713,9 @@ h4 {
     padding-bottom: 39px;
   }
   .format-stand h4 {
-    font-size: 17px;
+    font-size: 15px;
+    margin-bottom: auto;
+    line-height: 27px;
   }
   .format-stand p {
     font-size: 13px;

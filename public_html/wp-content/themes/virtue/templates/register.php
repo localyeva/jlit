@@ -53,23 +53,20 @@
 						<div class="row text-center mar-bt-20">
 							<input type="hidden" name="location" id="room" value="1">
 							<div id="room1" class="col-sm-4 add-info add-info-active">
-								<img alt="" src="images/location.png">
-								<strong> TP.HCM: <br> Văn Phòng VietnamWorks</strong><br>
-								130 Sương Nguyệt Ánh, <br>P.Bến Thành, Q1
+								<img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/location.png">
+								<?php echo $lang['m_tphcm']; ?>
 							</div>
 							<div id="room2"class="col-sm-4 add-info add-info-mid">
-								<img alt="" src="images/location.png">
-								<strong> Hà Nội: <br> Văn Phòng VietnamWorks</strong><br>
-								125-127 Bà Triệu, P.Nguyễn Du,<br> Quận Hai Bà Trưng
+								<img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/location.png">
+								<?php echo $lang['m_hanoi']; ?>
 							</div>
 							<div id="room3" class="col-sm-4 add-info">
-								<img alt="" src="images/location.png">
-								<strong> Đà Nẵng: <br> TBA</strong><br>
-								XXX
+								<img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/location.png">
+								<?php echo $lang['m_dn']; ?>
 							</div>
 						</div>
 						<div class="text-center">
-							<button id="bt_submit" type="button" class="btn active regis-red"> Đăng ký  <img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arr.png"></button>
+							<button id="bt_submit" type="button" class="btn active regis-red"> <?php echo $lang['m_register_form']; ?> <img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arr.png"></button>
 						</div>
 					</form>
 			</div>

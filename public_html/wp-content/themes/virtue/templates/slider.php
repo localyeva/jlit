@@ -6,7 +6,7 @@
 						 <div class="carousel-caption format-stand">
 					        <h4>Kì thi năng lực nhật ngữ cho chuyên ngành IT</h4>
 							<p>Japanse literacy & IT Test(JLIT)</p>
-							<a href="#form-register">Đăng ký miễn phí</a><br><br>
+							<a href="#form-register">Đăng ký miễn phí</a><br>
 							<img class="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arrow.png" alt="">
 					      </div>
 					</div>
