@@ -17,9 +17,12 @@
 	  <?php wp_head(); ?>  
 	  <script src="<?php bloginfo('template_url'); ?>/assets/js/jquery.min.js" type="text/javascript"></script>
 	  <script src="<?php bloginfo('template_url'); ?>/assets/js/bootstrap.min.js" type="text/javascript"></script>
-	  <script src="<?php bloginfo('template_url'); ?>/assets/js/common.js" type="text/javascript"></script>
+          <script src="<?php bloginfo('template_url'); ?>/assets/fancybox/jquery.fancybox.js" type="text/javascript"></script>
+          <script src="<?php bloginfo('template_url'); ?>/assets/js/common.js" type="text/javascript"></script>
 	  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/show.js"></script>  
 	  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/jquery.validate.js"></script>    
-	  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/css/font-awesome/css/font-awesome.css" /> 
+	  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/css/font-awesome/css/font-awesome.css" />
+          <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/css/back-to-top-style.css" /> 
+          <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/fancybox/jquery.fancybox.css" />
 	  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/css/virtue.css" /> 
 </head>

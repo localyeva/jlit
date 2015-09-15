@@ -61,7 +61,35 @@ h6 {
     padding-right: 0px;
 }
 /*Menu */
-.navbar-header {
+.cbp-spmenu {
+    background: none repeat scroll 0 0 #bf1e2e;
+    transition: all 0.3s ease 0s;
+    position: fixed;
+}
+.cbp-spmenu-left {
+    left: -240px;
+}
+.cbp-spmenu-open {
+    left: 0px;
+}
+.cbp-spmenu-vertical {
+    height: 100%;
+    overflow: scroll;
+    top: 0;
+    width: 240px;
+    z-index: 1000;
+}
+.pos-logo {
+    padding-left: 20px;
+    padding-top: 13px;
+}
+#header .md{
+    display: block;
+}
+#header #note{
+    display: block;
+}
+#header #mNavbar{
     display: none;
 }
 .navbar-nav > li > a {
@@ -93,6 +121,9 @@ h6 {
     background-color: #bf1e2e;
     min-height: 50px;
     font-weight: bold;
+}
+.navbar-default ul{
+    background-color: #bf1e2e;
 }
 .navbar {
     margin-bottom: 0px;
@@ -169,32 +200,29 @@ h6 {
     padding-right: 27px;
 }
 .time-class {
-    color: #ffffff;
-    background-color: #1A9BC1;
+    background-color: #fff;
     padding-left: 15px;
     min-height: 70px;
 }
 .time-class1 {
-    color: #ffffff;
-    background-color: #1A9BC1;
+    background-color: #fff;
     padding-left: 15px;
     min-height: 70px;
     margin-bottom: -10px;
 }
 .time-class2 {
-    color: #ffffff;
-    background-color: #1A9BC1;
+    background-color: #fff;
     margin-bottom: -10px;
     padding-left: 15px;
     min-height: 70px;
 }
 .time-class:hover, .time-class1:hover, .time-class2:hover {
-    color: #000;
-    background-color: #fff;
+    color: #ffffff;
+    background-color: #1A9BC1; 
 }
 .time-class-active {
-    color: #000;
-    background-color: #fff;
+    color: #ffffff;
+    background-color: #1A9BC1;    
 }
 h4 {
     font-weight: bold;
@@ -205,20 +233,19 @@ h4 {
     min-height: 170px;
     padding-top: 35px;
     max-width: 32%;
-    background-color: #1A9BC1;
-    color: #fff;
+    background-color: #fff;
 }
 .add-info-active {
-    color: #000;
-    background-color: #fff;
+    background-color: #1A9BC1;
+    color: #fff;    
 }
 .add-info-mid {
     margin-right: 20px;
     margin-left: 20px;
 }
 .add-info:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #1A9BC1;
+    color: #fff;
 }
 #add_right:hover {
     background-color: #1A9BC1;
@@ -391,14 +418,6 @@ h4 {
     padding-top: 70px;
 }
 
-.modal-content {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    margin-top: 15%;
-}
-.modal-dialog {
-    width: 800px;
-}
-
 .scroll-top-wrapper {
     position: fixed;
     opacity: 0;
@@ -445,7 +464,7 @@ h4 {
 }
 /*END Footer */
 /*--------------------------------------------------------------------- import*/
-@media (max-width: 480px) {
+@media (max-width: 480px) {    
     .container {
         padding-left: 10px;
         padding-right: 10px;
@@ -453,21 +472,23 @@ h4 {
     .bo-intro {
         height: 230px;
     }
-    .navbar-collapse {
-        padding-left: 15px;
-    }
+
     .center {
         text-align: center;
     }
     .right {
         text-align: center;
     }
+    /*    
+    .navbar-collapse {
+        padding-left: 15px;
+    }
     .navbar-header {
         display: block;
     }
     .hei-menu {
         padding-left: 0px;
-    }
+    }*/
     .add-info-mid {
         //background-color: #ffffff;
         margin-right: 12px;
@@ -568,9 +589,6 @@ h4 {
     .footer-top .pad-t-70 {
         padding-top: 50px;
     }
-    .modal-dialog {
-        width: 100%;
-    }
 }
 @media (max-device-width: 480px) {
     .add-info-mid {
@@ -580,9 +598,6 @@ h4 {
     }
     .bo-intro {
         height: 250px;
-    }
-    .modal-dialog {
-        width: 100%;
     }
     .question-right {
         padding-top: 0px;
@@ -688,6 +703,43 @@ h4 {
         padding-left: 70px;
     }
 }
+
+/* Mobile Menu */
+@media (max-width: 767px) {
+    #header .md{
+        display: none;
+    }
+    #header #note{
+        display: none;
+    }
+    #header #mNavbar{
+        display: block;
+    }
+    .navbar-default {
+        background-color: #fff;
+    }
+    .navbar-default ul a{
+        padding: 10px 10px 10px 40px;
+    }
+    .navbar-default .navbar-nav > .active > a{
+        background-color: #bf1e2e;
+        color: #fff;
+    }
+    .navbar-default .navbar-nav > .active > a:hover{
+        background-color: #eee;
+        color: #555;
+    }
+    
+    .learn-content img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    #form-register .container{
+        margin-left: 25px;
+        margin-right:25px;
+    }
+}
 @media (min-width: 481px) and (max-width: 767px) {
     .container {
         padding-left: 10px;
@@ -704,10 +756,7 @@ h4 {
     }
     .right {
         text-align: center;
-    }
-    .navbar-header {
-        display: block;
-    }
+    }        
     .hei-menu {
         padding-left: 0px;
     }
@@ -757,9 +806,9 @@ h4 {
     .format-stand {
         left: 7%;
         top: 5%;
-    .learn-content {
-        margin-left: 60px;
-    }
+        .learn-content {
+            margin-left: 60px;
+        }
         max-width: 95%;
         text-shadow: none;
         font-size: 9px;
@@ -776,14 +825,7 @@ h4 {
         margin-left: 0px;
         font-size: 25px;
         padding: 15px 100px;
-    }P.Bến Thành, Q1
-        Hà Nội:
-            Văn Phòng VietnamWorks
-            125-127 Bà Triệu, P.Nguyễn Du,
-            Quận Hai Bà Trưng
-            Đà Nẵng:
-            TBA
-            XXX
+    }
     .ip-smar{
         margin-left: -11px;
     }
@@ -832,9 +874,6 @@ h4 {
         padding-top: 50px;
         padding-left: 70px;
     }
-    .modal-dialog {
-        width: 100%;
-    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .hei-menu {
@@ -843,9 +882,6 @@ h4 {
     }
     .navbar-collapse {
         padding-left: 5px;
-    }
-    .modal-dialog {
-        width: 100%;
     }
     .mar-r{
         margin-right: 22%;
@@ -929,6 +965,10 @@ h4 {
         cursor: pointer;
         height: 277px;
         padding: 5% 38%;
+    }
+    .add-info-mid {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 @media (min-width: 1200px) and (max-width: 1300px) {

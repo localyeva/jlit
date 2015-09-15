@@ -1,0 +1,33 @@
+.scroll-top-wrapper.cd-is-visible, .scroll-top-wrapper.cd-fade-out, .no-touch .scroll-top-wrapper:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.scroll-top-wrapper.cd-is-visible {
+  /* the button becomes visible */
+  cursor: pointer;
+  visibility: visible;
+  opacity: 1;
+}
+.scroll-top-wrapper.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .scroll-top-wrapper:hover {
+  //background-color: #e86256;
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  .scroll-top-wrapper {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .scroll-top-wrapper {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
+}
