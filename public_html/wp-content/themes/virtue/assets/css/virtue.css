@@ -624,6 +624,8 @@ h4 {
     }
     .regis-red {
         font-size: 27px;
+        margin: 0px;
+        min-width: 50px;
     }
     .regis-red:hover {
         color: #ffffff;
@@ -649,10 +651,6 @@ h4 {
     .regis {
         font-size: 30px;
     }
-    .regis-red {
-        margin: 0px;
-        min-width: 267px;
-    }
     .learn-content {
         margin-left: 0px;
         padding-left: 0px;
@@ -670,10 +668,7 @@ h4 {
     }
     .learn-content .right {
         padding-right: 0px;
-        text-align: center;.regis-red {
-            margin: 0;
-            min-width: 267px;
-        }
+        text-align: center;
     }
     .learn-content .right img {
         margin-right: 0px;
@@ -868,7 +863,7 @@ h4 {
         margin-left: 0px;
     }
     .regis-red {
-        min-width: 400px;
+        min-width: 370px;
     }
     .footer-top .txt-cent {
         padding-left: 73px;
