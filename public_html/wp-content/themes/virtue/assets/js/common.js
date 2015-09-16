@@ -113,7 +113,6 @@ $(document).ready(function () {
             $back_to_top.addClass('cd-fade-out');
         }
         x = $(this).scrollTop() > offset;
-        console.log(x);
         $('#navbar').removeClass('cbp-spmenu-open');
     });
 

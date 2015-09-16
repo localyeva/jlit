@@ -5,7 +5,7 @@
     </div>
     <h1 class="text-center regis">Đăng ký dự thi miễn phí</h1>
     <div class="container bg1 mar-bt-100">
-        <form class="form-horizontal" role="form" id="register" action="<?php bloginfo('siteurl') ?>?json=register" method="POST">
+        <form class="form-horizontal" role="form" id="confirm" action="<?php bloginfo('siteurl') ?>?json=confirm" method="POST">
             <div class="row mar-bt-20">
                 <div class="col-md-6 col-xs-12">
                     <div class="form-group">
@@ -35,8 +35,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mar-bt-50 mar-r-1">
-                <input type="hidden" id="class" name="test_level" value="1">
+            <div class="row mar-bt-50 mar-r-1">                
                 <div id="class3" class="time-class2">
                     <h4><?php echo $lang['m_test_level_i3']; ?></h4>
                     <span><?php echo $lang['m_test_level_i3']; ?></span>
@@ -49,9 +48,9 @@
                     <h4><?php echo $lang['m_test_level_i1']; ?></h4>
                     <span><?php echo $lang['m_test_level_i1']; ?></span>
                 </div>
+                <input type="hidden" id="class" name="test_level" value="-1">
             </div>
-            <div class="row text-center mar-bt-20">
-                <input type="hidden" name="location" id="room" value="1">
+            <div class="row text-center mar-bt-20">                
                 <div id="room1" class="col-sm-4 add-info">
                     <img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/location.png">
                     <?php echo $lang['m_tphcm']; ?>
@@ -64,19 +63,91 @@
                     <img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/location.png">
                     <?php echo $lang['m_dn']; ?>
                 </div>
+                <input type="hidden" name="location" id="room" value="-1">
             </div>
             <div class="text-center">
                 <button id="bt_submit" type="button" class="btn active regis-red"> <?php echo $lang['m_register_form']; ?> <img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arr.png"></button>
             </div>
-        </form>
+        </form>        
+    </div>
+
+    <div style="display:none">
+        <div class="container-fluid" id="register">
+            <h1 class="text-center">Đăng ký dự thi miễn phí</h1>            
+            <div class="container">
+                <form role="form" id="frmregister" action="<?php bloginfo('siteurl') ?>?json=register" method="POST">                    
+                    <table class="table table-responsive confirm">
+                        <tr>
+                            <th>Họ Tên</th>
+                            <td id="cfullname"></td>
+                        </tr>
+                        <tr>
+                            <th>Ngày sinh</th>
+                            <td id="cdob"></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td id="cemail"></td>
+                        </tr>
+                        <tr>
+                            <th>Địa chỉ</th>
+                            <td id="caddress"></td>
+                        </tr>
+                        <tr>
+                            <th>Số CMND</th>
+                            <td id="cid_number"></td>
+                        </tr>
+                        <tr>
+                            <th>Giới tính</th>
+                            <td id="cgender"></td>
+                        </tr>
+                        <tr>
+                            <th>Điện thoại</th>
+                            <td id="ccellphone"></td>
+                        </tr>
+                        <tr>
+                            <th>Cấp độ và thời gian thi</th>
+                            <td id="">
+                                <div id="cclass3" style="display:none">
+                                    <span><?php echo $lang['m_test_level_i3']; ?></span>
+                                </div>
+                                <div id="cclass2" style="display:none">
+                                    <span><?php echo $lang['m_test_level_i2']; ?></span>
+                                </div>
+                                <div id="cclass1" style="display:none">
+                                    <span><?php echo $lang['m_test_level_i1']; ?></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Địa điểm</th>
+                            <td id="">
+                                <div id="croom1" style="display:none">
+                                    <?php echo $lang['m_tphcm']; ?>
+                                </div>
+                                <div id="croom2" style="display:none">
+                                    <?php echo $lang['m_hanoi']; ?>
+                                </div>
+                                <div id="croom3" style="display:none">
+                                    <?php echo $lang['m_dn']; ?>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="text-center">
+                        <button id="bt_register" type="button" class="btn active regis-red"> <?php echo $lang['m_confirm_form']; ?> <img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arr.png"></button>
+                    </div>
+                </form>                
+            </div>
+        </div>
     </div>
 </div>
 <script type="text/javascript">
     $('#bt_submit').on('click', function () {
         $.ajax({
-            url: '<?php bloginfo('siteurl') ?>?json=register',
+            url: '<?php bloginfo('siteurl') ?>?json=confirm',
             type: 'post',
-            data: $('#register input[type=\'text\'], #register input[type=\'hidden\'], #product input[type=\'radio\']:checked'),
+            data: $('#confirm input[type=\'text\'], #confirm input[type=\'hidden\'], #confirm input[type=\'radio\']:checked'),
             dataType: 'json',
             beforeSend: function () {
                 $('#bt_submit').button('loading');
@@ -107,9 +178,79 @@
                     if (json['error']['er_cellphone']) {
                         $('#cellphone').after('<div class="show-error">' + json['error']['er_cellphone'] + '</div>');
                     }
+                    if (json['error']['er_test_level']) {
+                        $('#class').after('<div class="show-error">' + json['error']['er_test_level'] + '</div>');
+                    }
+                    if (json['error']['er_location']) {
+                        $('#room').after('<div class="show-error">' + json['error']['er_location'] + '</div>');
+                    }
                 }
                 if (json['success']) {
-                    $('#register').before('<div class="success">' + json['success'] + '</div>');
+                    //$('#register').before('<div class="success">' + json['success'] + '</div>');
+                    $('#cfullname').html($('#fullname').val());
+                    $('#cemail').html($('#email').val());
+                    $('#cdob').html($('#dob').val());
+                    $('#caddress').html($('#address').val());
+                    $('#cid_number').html($('#id_number').val());
+                    $('#ccellphone').html($('#cellphone').val());
+                    $('#cclass1,#cclass2,#cclass3').hide();
+                    $('#cclass' + $('#class').val()).show();
+                    $('#croom1,#croom2,#croom3').hide();
+                    $('#croom' + $('#room').val()).show();
+                    $('#cgender').html($("input[type='radio'][name='gender']:checked").val()=='Male'?'Nam':'Nữ');                    
+                    $.fancybox([
+                        {href: '#register'}
+                    ]);
+                }
+            }
+        });
+    });
+    $('#bt_register').on('click', function () {
+        $.ajax({
+            url: '<?php bloginfo('siteurl') ?>?json=register',
+            type: 'post',
+            data: $('#confirm input[type=\'text\'], #confirm input[type=\'hidden\'], #confirm input[type=\'radio\']:checked'),
+            dataType: 'json',
+            beforeSend: function () {
+                $('#bt_register').button('loading');
+            },
+            complete: function () {
+                $('#bt_register').button('reset');
+                $('#bt_submit').button('reset');
+            },
+            success: function (json) {
+                $('.show-error').remove();
+                $('.success').remove();
+
+                if (json['error']) {
+                    if (json['error']['er_fullname']) {
+                        $('#fullname').after('<div class="show-error">' + json['error']['er_fullname'] + '</div>');
+                    }
+                    if (json['error']['er_email']) {
+                        $('#email').after('<div class="show-error">' + json['error']['er_email'] + '</div>');
+                    }
+                    if (json['error']['er_dob']) {
+                        $('#dob').after('<div class="show-error">' + json['error']['er_dob'] + '</div>');
+                    }
+                    if (json['error']['er_address']) {
+                        $('#address').after('<div class="show-error">' + json['error']['er_address'] + '</div>');
+                    }
+                    if (json['error']['er_id_number']) {
+                        $('#id_number').after('<div class="show-error">' + json['error']['er_id_number'] + '</div>');
+                    }
+                    if (json['error']['er_cellphone']) {
+                        $('#cellphone').after('<div class="show-error">' + json['error']['er_cellphone'] + '</div>');
+                    }
+                    if (json['error']['er_test_level']) {
+                        $('#class').after('<div class="show-error">' + json['error']['er_test_level'] + '</div>');
+                    }
+                    if (json['error']['er_location']) {
+                        $('#room').after('<div class="show-error">' + json['error']['er_location'] + '</div>');
+                    }
+                }
+                if (json['success']) {
+                    $.fancybox.close();
+                    $('#confirm').before('<div class="success">' + json['success'] + '</div>');
                 }
             }
         });

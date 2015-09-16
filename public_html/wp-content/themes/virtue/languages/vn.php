@@ -26,6 +26,7 @@
 	$lang['m_register'] = "Đăng ký";
 	$lang['m_register_locked'] = "Hết hạn đăng ký ";
 	$lang['m_register_form'] = "Đăng ký";
+        $lang['m_confirm_form'] = "Đồng ý";
 
 	$lang['m_personal_information'] = "Thông tin cá nhân";	
 	$lang['m_professional_skills'] = "Trình độ chuyên môn";	

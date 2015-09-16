@@ -738,6 +738,10 @@ h4 {
         margin-left: 25px;
         margin-right:25px;
     }
+    .add-info-mid {
+        border-top: 1px solid #ebeae8;
+        border-bottom: 1px solid #ebeae8;
+    }
 }
 @media (min-width: 481px) and (max-width: 767px) {
     .container {
