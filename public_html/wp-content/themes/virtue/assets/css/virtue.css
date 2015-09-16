@@ -262,7 +262,8 @@ h4 {
     margin: 17px;
 }
 .regis-red:hover {
-    color: #ffffff;
+    background: #ffa6a6; 
+    //border-color: fade(#FFF, 45%);
 }
 .btn.active, .btn:active {
     color: #ffffff;
@@ -377,6 +378,16 @@ h4 {
     border: 5px solid #e79c9c;
     border-radius: 5px;
 }
+.a-register a:hover {
+    background: #ffa6a6; 
+}
+.intro-title > a:hover{
+    color: #ffa6a6;
+}
+a:hover > .bo-intro {
+    background: #f5f5f5; 
+}
+
 .a-register img {
     width: 40px;
 }
