@@ -75,7 +75,7 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
             </a>
         </div>
         <div style="display: none">
-            <div class="modal-dialog" role="document" id="target">
+            <div id="target">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title" id="myModalLabel"><?php echo $p[1]['post_title']; ?></h4>
@@ -86,17 +86,18 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
                 </div>
             </div>
         </div>
-        <div class="col-lg-4" data-toggle="modal" data-target="#scop">
-            <div class="intro-title"><a href="#"><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arrow2.png"> <?php echo $p[2]['post_title']; ?></a></div>
-            <div class="bo-intro">
-                <img class="img-responsive" alt="" src="<?php echo $p[2]['post_thumnail']; ?>" alt="<?php echo $p[2]['post_id']; ?>">
-            </div>
+        <div class="col-lg-4">
+            <div class="intro-title"><a id="inline2" href="#scop"><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arrow2.png"> <?php echo $p[2]['post_title']; ?></a></div>
+            <a id="inline2" href="#scop">
+                <div class="bo-intro">
+                    <img class="img-responsive" alt="" src="<?php echo $p[2]['post_thumnail']; ?>" alt="<?php echo $p[2]['post_id']; ?>">
+                </div>
+            </a>
         </div>
-        <div class="modal fade" id="scop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
+        <div style="display: none">
+            <div id="scop">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel"><?php echo $p[2]['post_title']; ?></h4>
                     </div>
                     <div class="modal-body">
@@ -105,17 +106,18 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
                 </div>
             </div>
         </div>
-        <div class="col-lg-4" data-toggle="modal" data-target="#mess">
-            <div class="intro-title"><a href="#"><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arrow2.png"> <?php echo $p[3]['post_title']; ?></a></div>
-            <div class="bo-intro">
-                <img class="img-responsive" alt="" src="<?php echo $p[3]['post_thumnail']; ?>" alt="<?php echo $p[3]['post_id']; ?>">
-            </div>
+        <div class="col-lg-4">
+            <div class="intro-title"><a id="inline3" href="#mess"><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arrow2.png"> <?php echo $p[3]['post_title']; ?></a></div>
+            <a id="inline3" href="#mess">
+                <div class="bo-intro">
+                    <img class="img-responsive" alt="" src="<?php echo $p[3]['post_thumnail']; ?>" alt="<?php echo $p[3]['post_id']; ?>">
+                </div>
+            </a>
         </div>
-        <div class="modal fade" id="mess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
+        <div style="display: none">
+            <div id="mess">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel"><?php echo $p[3]['post_title']; ?></h4>
                     </div>
                     <div class="modal-body">

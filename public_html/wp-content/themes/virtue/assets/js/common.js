@@ -1,8 +1,12 @@
 
 $(document).ready(function () {
-    $("a#inline1").fancybox({
+    $("a#inline1,a#inline2,a#inline3").fancybox({
         'hideOnContentClick': true
     });
+    $("a#voice1,a#voice2,a#voice3").fancybox({
+        'hideOnContentClick': true
+    });
+    
     $('#showLeft').click(function () {
         if ($('#navbar').hasClass('cbp-spmenu-open')) {
             $('#navbar').removeClass('cbp-spmenu-open');
