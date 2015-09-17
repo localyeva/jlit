@@ -280,6 +280,7 @@ class JSON_API_Core_Controller {
     }
 
     public function valid($data = array()) {
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
         $jsons = array();
         $errors = array();
         if ($data['id_number'] == '') {
@@ -291,8 +292,8 @@ class JSON_API_Core_Controller {
 
         if ($data['dob'] == '') {
             $errors['er_dob'] = "Nhập ngày tháng năm sinh";
-        } elseif (date("Y/m/d", strtotime($data['dob'])) != $data['dob']) {
-            $errors['er_dob'] = "Nhập ngày tháng năm sinh theo định dạng yyyy/mm/dd";
+        } elseif (date("d-m-Y", strtotime($data['dob'])) != $data['dob']) {
+            $errors['er_dob'] = "Nhập ngày tháng năm sinh theo định dạng d-m-Y";
         }
         if ($data['email'] == '') {
             $errors['er_email'] = "Nhập địa chỉ email";
@@ -336,6 +337,7 @@ class JSON_API_Core_Controller {
     }
 
     public function register() {
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
         $json = array();
         if (j_is_register() == false) {
             return;
@@ -370,10 +372,9 @@ class JSON_API_Core_Controller {
 
             if ($res == 1) {
                 session_start();
-                $_SESSION['register'] = 1;
-                $json['success'] = 'Bạn đã đăng ký thành công';
+                $_SESSION['register'] = 1;                
             }
-
+            $json['success'] = 'Bạn đã đăng ký thành công';
             //process for vietnamworks
             if (vietnamworks_is_exists($_POST['email']) == true) {
                 $_SESSION['new_member'] = 0;

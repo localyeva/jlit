@@ -143,6 +143,10 @@
     </div>
 </div>
 <script type="text/javascript">
+    $('#dob').datetimepicker({
+        timepicker:false,
+        format:'d-m-Y'
+    });
     $('#bt_submit').on('click', function () {
         $.ajax({
             url: '<?php bloginfo('siteurl') ?>?json=confirm',
