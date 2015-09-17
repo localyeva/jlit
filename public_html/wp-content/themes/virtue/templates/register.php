@@ -64,11 +64,11 @@
                     <?php echo $lang['m_dn']; ?>
                 </div>
                 <input type="hidden" name="location" id="room" value="-1">
-            </div>
-            <div class="text-center">
+            </div>            
+        </form>   
+        <div class="row text-center row-regis-red">
                 <button id="bt_submit" type="button" class="btn active regis-red"> <?php echo $lang['m_register_form']; ?> <img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arr.png"></button>
             </div>
-        </form>        
     </div>
 
     <div style="display:none">
@@ -133,11 +133,11 @@
                                 </div>
                             </td>
                         </tr>
-                    </table>
-                    <div class="text-center">
-                        <button id="bt_register" type="button" class="btn active regis-red"> <?php echo $lang['m_confirm_form']; ?> <img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arr.png"></button>
-                    </div>
-                </form>                
+                    </table>                    
+                </form>       
+                <div class="row text-center row-regis-red">
+                <button id="bt_submit" type="button" class="btn active regis-red"> <?php echo $lang['m_confirm_form']; ?> <img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arr.png"></button>
+            </div>
             </div>
         </div>
     </div>

@@ -477,6 +477,7 @@ a:hover > .bo-intro {
 }
 /*END Footer */
 /*--------------------------------------------------------------------- import*/
+/*
 @media (max-width: 480px) {    
     .container {
         padding-left: 10px;
@@ -492,16 +493,7 @@ a:hover > .bo-intro {
     .right {
         text-align: center;
     }
-    /*    
-    .navbar-collapse {
-        padding-left: 15px;
-    }
-    .navbar-header {
-        display: block;
-    }
-    .hei-menu {
-        padding-left: 0px;
-    }*/
+
     .add-info-mid {
         //background-color: #ffffff;
         margin-right: 12px;
@@ -603,11 +595,23 @@ a:hover > .bo-intro {
         padding-top: 50px;
     }
 }
-@media (max-device-width: 480px) {
+*/
+@media (max-width: 480px) {
+    .add-info {
+        max-width: 97%;
+    }
     .add-info-mid {
-        //background-color: #ffffff;
-        margin-right: 12px;
-        margin-left: 12px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .add-info-none {
+        max-width: 97%;
+    }
+    .center {
+        text-align: center;
+    }
+    .right {
+        text-align: center;
     }
     .bo-intro {
         height: 250px;
@@ -636,10 +640,13 @@ a:hover > .bo-intro {
     .a-register h2 {
         font-size: 30px;
     }
+    .row-regis-red {
+        padding-bottom: 10px;
+    }
     .regis-red {
         font-size: 27px;
         margin: 0px;
-        min-width: 50px;
+        min-width: 50px;        
     }
     .regis-red:hover {
         color: #ffffff;
