@@ -644,6 +644,21 @@ a:hover > .bo-intro {
     .regis-red:hover {
         color: #ffffff;
     }
+    .regis{
+        font-size: 24px;
+    }
+    .text-left{        
+        font-size: 10px;
+        left: 5% !important;
+    }
+    .text-left h4{        
+        font-size: 14px !important;
+        line-height: 30px !important;
+    }
+    .text-left a {
+        background-color: #383334 !important;
+        padding: 2px 3px !important;
+    }
     .format-stand {
         max-width: 41%;
         left: 10%;
@@ -711,9 +726,72 @@ a:hover > .bo-intro {
         padding-left: 70px;
     }
 }
+#fixed-sequence {
+    height: 605px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.head-img {
+    background: url("../img/vir/banner.png") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);
+}
+.bg-height {
+    height: 605px;
+    position: relative;
+}
+.grid-pad {
+    padding-left: 20px;
+    padding-right: 0;
+    padding-top: 20px;
+}
+.grid {
+    margin: 0 auto;
+    max-width: 1140px;
+    min-width: 755px;
+    overflow: hidden;
+    width: 100%;
+}
+.text-left {
+    left: 17%;
+    top: 20%;
+    max-width: 95%;
+    text-shadow: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+.text-left h4 {
+    color: #bf1e2e;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 53px;
+}
+.text-left p {
+    color: #000000;
+    margin-bottom: 23px;
+}
+.text-left a {
+    background-color: #383334;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+.text-left a:hover {
+    background-color: #524f4a;
+}
+.text-left img {
+    margin-top: 23px;
+}
 
 /* Mobile Menu */
 @media (max-width: 767px) {
+    .text-left{
+        background: url("../img/bg1px.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    }
+    .head-img {
+        background: url("../img/mbanner.png") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);
+    }    
     #header .md{
         display: none;
     }
@@ -753,6 +831,42 @@ a:hover > .bo-intro {
     }
 }
 @media (min-width: 481px) and (max-width: 767px) {
+    .regis{
+        font-size: 35px;
+    }
+    .text-left {
+        left: 7%;
+        font-size: 15px;
+    }
+    .text-left h4{        
+        font-size: 25px;
+        line-height: 45px;
+        margin-bottom: auto;
+    }
+    
+    .format-stand {
+        left: 7%;
+        top: 5%;
+        max-width: 95%;
+        text-shadow: none;
+        font-size: 9px;
+    }
+    .format-stand h4 {
+        font-size: 12px;
+        line-height: 17px;
+        margin-bottom: auto;
+    }
+    .format-stand p {
+        color: #000000;
+        margin-bottom: 15px;
+    }
+    .format-stand a {
+        background-color: #383334;
+        padding: 2px 3px;
+    }
+    .format-stand img {
+        margin-top: 0px;
+    }
     .container {
         padding-left: 10px;
         padding-right: 10px;
@@ -815,21 +929,6 @@ a:hover > .bo-intro {
     .mar-t-150 {
         margin-top: 50px;
     }
-    .format-stand {
-        left: 7%;
-        top: 5%;
-        .learn-content {
-            margin-left: 60px;
-        }
-        max-width: 95%;
-        text-shadow: none;
-        font-size: 9px;
-    }
-    .format-stand h4 {
-        font-size: 12px;
-        line-height: 17px;
-        margin-bottom: auto;
-    }
     .a-register h2 {
         font-size: 35px;
     }
@@ -847,18 +946,7 @@ a:hover > .bo-intro {
     .ip-smar p{
         height:35px;
         padding: 13px 15px;
-    }
-    .format-stand p {
-        color: #000000;
-        margin-bottom: 15px;
-    }
-    .format-stand a {
-        background-color: #383334;
-        padding: 2px 3px;
-    }
-    .format-stand img {
-        margin-top: 0px;
-    }
+    }    
     .learn-content {
         margin-left: 0px;
         padding-left: 10px;
@@ -889,6 +977,9 @@ a:hover > .bo-intro {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .text-left {
+        left: 7%;
+    }
     .hei-menu {
         font-size: 13px;
         padding-left: 0px;
@@ -984,7 +1075,7 @@ a:hover > .bo-intro {
         margin-right: 10px;
     }
 }
-@media (min-width: 1200px) and (max-width: 1300px) {
+@media (min-width: 1200px) and (max-width: 1300px) {    
     .format-stand {
         left: 14%;
         padding-bottom: 5%;
