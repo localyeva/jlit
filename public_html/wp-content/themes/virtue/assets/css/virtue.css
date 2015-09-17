@@ -268,6 +268,9 @@ h4 {
 .btn.active, .btn:active {
     color: #ffffff;
 }
+.modal-content{
+    max-width: 900px;
+}
 /* Limit practice */
 .content {
     padding-left: 0px;
@@ -734,12 +737,12 @@ a:hover > .bo-intro {
         background-color: #eee;
         color: #555;
     }
-    
+
     .learn-content img{
         width: 50px;
         height: 50px;
     }
-    
+
     #form-register .container{
         margin-left: 25px;
         margin-right:25px;
@@ -884,6 +887,7 @@ a:hover > .bo-intro {
         padding-left: 70px;
     }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
     .hei-menu {
         font-size: 13px;
