@@ -21,6 +21,9 @@ h5,
 h6 {
     font-family: 'Roboto', sans-serif;
 }
+.container{
+    max-width: 1140px;
+}
 .mar-t-10 {
     margin-top: 10px;
 }
@@ -40,13 +43,13 @@ h6 {
     margin-top: 150px;
 }
 .mar-bt-20 {
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
 }
 .mar-bt-30 {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 .mar-bt-50 {
-    margin-bottom: 50px;
+    margin-bottom: 15px;
 }
 .mar-bt-100 {
     margin-bottom: 100px;
@@ -231,7 +234,7 @@ h4 {
 }
 .add-info {
     min-height: 170px;
-    padding-top: 35px;
+    padding-top: 25px;
     max-width: 32%;
     background-color: #fff;
 }
@@ -259,7 +262,7 @@ h4 {
     font-size: 35px;
     min-width: 513px;
     min-height: 70px;
-    margin: 17px;
+    margin-bottom: 15px;
 }
 .regis-red:hover {
     background: #ffa6a6; 
@@ -832,9 +835,16 @@ a:hover > .bo-intro {
         margin-left: 25px;
         margin-right:25px;
     }
+    .add-info {
+        padding-top: 20px;
+        min-height: 120px;
+    }
     .add-info-mid {
         border-top: 1px solid #ebeae8;
         border-bottom: 1px solid #ebeae8;
+    }
+    .mar-bt-100 {
+        margin-bottom: 50px;
     }
 }
 @media (min-width: 481px) and (max-width: 767px) {
@@ -1031,9 +1041,6 @@ a:hover > .bo-intro {
     }
     .format-stand a {
         font-size: 10px;
-    }
-    .add-info {
-        min-height: 200px;
     }
     .add-info-mid {
         margin-left: 12px;
