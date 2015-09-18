@@ -759,7 +759,7 @@ a:hover > .bo-intro {
     }
 }
 #fixed-sequence {
-    height: 605px;
+    height: 525px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -769,7 +769,7 @@ a:hover > .bo-intro {
     background: url("../img/vir/banner.png") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);
 }
 .bg-height {
-    height: 605px;
+    height: 525px;
     position: relative;
 }
 .grid-pad {
@@ -823,7 +823,7 @@ a:hover > .bo-intro {
     }
     .head-img {
         background: url("../img/mbanner.png") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);
-    }    
+    }
     #header .md{
         display: none;
     }
