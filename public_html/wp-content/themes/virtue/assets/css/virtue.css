@@ -630,10 +630,6 @@ a:hover > .bo-intro {
     .bo-intro {
         height: 250px;
     }
-    .question-right {
-        padding-top: 0px;
-        padding-left: 78px;
-    }
     .learn-content {
         margin-left: 60px;
     }
@@ -645,9 +641,21 @@ a:hover > .bo-intro {
         margin-right: 0px;
     }
     .question-right {
-        padding-left: 19px;
+        padding-left: 25px;
         text-align: justify;
     }
+    #message .text-format{
+        padding-left: 25px;
+    }
+    .footer-botton{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #voice_content3 img, #voice_content2 img, #voice_content1 img{
+        width: 150px;
+        height: 150px;
+    }
+    
     .dis-hide {
         display: none;
     }
