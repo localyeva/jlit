@@ -11,6 +11,6 @@
 
 <div id="note" class="container-fluid">
     <div>
-        <img class="img-responsive" style="width: 100%" alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/note.png">
+        <img class="img-responsive" style="width: 100%" alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/m-note.png">
     </div>
 </div>
