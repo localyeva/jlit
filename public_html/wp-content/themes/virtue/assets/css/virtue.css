@@ -219,6 +219,10 @@ h6 {
     padding-left: 15px;
     min-height: 70px;
 }
+
+.time-class > h4, .time-class1 > h4, .time-class2 > h4{
+    line-height: 30px;
+}
 .time-class:hover, .time-class1:hover, .time-class2:hover {
     color: #ffffff;
     background-color: #1A9BC1; 
