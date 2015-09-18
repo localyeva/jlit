@@ -12,30 +12,19 @@
                         <input id="fullname" name="fullname" type="text" class="form-control" placeholder="Họ Tên" aria-describedby="basic-addon1">
                     </div>
                     <div class="form-group">
-                        <input id="dob" name="dob" type="text" class="form-control" placeholder="Ngày sinh" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="form-group">
                         <input id="email" name="email" type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="form-group">
-                        <input id="address" name="address" type="text" class="form-control" placeholder="Địa chỉ" aria-describedby="basic-addon1">
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-12">
                     <div class="form-group">
                         <input id="id_number" name="id_number" type="text" class="form-control" placeholder="Số CMND" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="form-group mar-bt-23">
-                        <label class="radio-inline">Giới tính:</label>
-                        <label class="radio-inline"><input type="radio" name="gender" checked="checked" value="Male">Nam</label>
-                        <label class="radio-inline"><input type="radio" name="gender" value="Female">Nữ</label>
-                    </div>
+                    </div>                    
                     <div class="form-group">
                         <input id="cellphone" name="cellphone" type="text" class="form-control" placeholder="Điện thoại" aria-describedby="basic-addon1">
                     </div>
                 </div>
             </div>
-            <div class="row mar-bt-50 mar-r-1">                
+            <!--div class="row mar-bt-50 mar-r-1">                
                 <div id="class3" class="time-class2">
                     <h4><?php echo $lang['m_test_level_i3']; ?></h4>
                     <span><?php echo $lang['m_test_level_i3']; ?></span>
@@ -47,6 +36,18 @@
                 <div id="class1" class="time-class">
                     <h4><?php echo $lang['m_test_level_i1']; ?></h4>
                     <span><?php echo $lang['m_test_level_i1']; ?></span>
+                </div>
+                <input type="hidden" id="class" name="test_level" value="-1">
+            </div-->
+            <div class="row text-center mar-bt-20" style="padding-bottom: 15px">                
+                <div id="class3" class="col-sm-4 add-info">
+                    <h4><?php echo $lang['m_test_level_i3']; ?></h4>
+                </div>
+                <div id="class2"class="col-sm-4 add-info add-info-mid">
+                    <h4><?php echo $lang['m_test_level_i2']; ?></h4>
+                </div>
+                <div id="class1" class="col-sm-4 add-info">
+                    <h4><?php echo $lang['m_test_level_i1']; ?></h4>
                 </div>
                 <input type="hidden" id="class" name="test_level" value="-1">
             </div>
@@ -73,34 +74,22 @@
 
     <div style="display:none">
         <div class="container-fluid" id="register">
-            <h1 class="text-center">Đăng ký dự thi miễn phí</h1>            
+            <h1 class="text-center regis" style="color: #000">Đăng ký dự thi miễn phí</h1>            
             <div class="container">
                 <form role="form" id="frmregister" action="<?php bloginfo('siteurl') ?>?json=register" method="POST">                    
                     <table class="table table-responsive confirm">
                         <tr>
                             <th>Họ Tên</th>
                             <td id="cfullname"></td>
-                        </tr>
-                        <tr>
-                            <th>Ngày sinh</th>
-                            <td id="cdob"></td>
-                        </tr>
+                        </tr>                        
                         <tr>
                             <th>Email</th>
                             <td id="cemail"></td>
-                        </tr>
-                        <tr>
-                            <th>Địa chỉ</th>
-                            <td id="caddress"></td>
-                        </tr>
+                        </tr>                        
                         <tr>
                             <th>Số CMND</th>
                             <td id="cid_number"></td>
-                        </tr>
-                        <tr>
-                            <th>Giới tính</th>
-                            <td id="cgender"></td>
-                        </tr>
+                        </tr>                        
                         <tr>
                             <th>Điện thoại</th>
                             <td id="ccellphone"></td>
@@ -170,12 +159,6 @@
                     if (json['error']['er_email']) {
                         $('#email').after('<div class="show-error">' + json['error']['er_email'] + '</div>');
                     }
-                    if (json['error']['er_dob']) {
-                        $('#dob').after('<div class="show-error">' + json['error']['er_dob'] + '</div>');
-                    }
-                    if (json['error']['er_address']) {
-                        $('#address').after('<div class="show-error">' + json['error']['er_address'] + '</div>');
-                    }
                     if (json['error']['er_id_number']) {
                         $('#id_number').after('<div class="show-error">' + json['error']['er_id_number'] + '</div>');
                     }
@@ -193,15 +176,12 @@
                     //$('#register').before('<div class="success">' + json['success'] + '</div>');
                     $('#cfullname').html($('#fullname').val());
                     $('#cemail').html($('#email').val());
-                    $('#cdob').html($('#dob').val());
-                    $('#caddress').html($('#address').val());
                     $('#cid_number').html($('#id_number').val());
                     $('#ccellphone').html($('#cellphone').val());
                     $('#cclass1,#cclass2,#cclass3').hide();
                     $('#cclass' + $('#class').val()).show();
                     $('#croom1,#croom2,#croom3').hide();
-                    $('#croom' + $('#room').val()).show();
-                    $('#cgender').html($("input[type='radio'][name='gender']:checked").val()=='Male'?'Nam':'Nữ');                    
+                    $('#croom' + $('#room').val()).show();                   
                     $.fancybox([
                         {href: '#register'}
                     ]);
@@ -232,12 +212,6 @@
                     }
                     if (json['error']['er_email']) {
                         $('#email').after('<div class="show-error">' + json['error']['er_email'] + '</div>');
-                    }
-                    if (json['error']['er_dob']) {
-                        $('#dob').after('<div class="show-error">' + json['error']['er_dob'] + '</div>');
-                    }
-                    if (json['error']['er_address']) {
-                        $('#address').after('<div class="show-error">' + json['error']['er_address'] + '</div>');
                     }
                     if (json['error']['er_id_number']) {
                         $('#id_number').after('<div class="show-error">' + json['error']['er_id_number'] + '</div>');

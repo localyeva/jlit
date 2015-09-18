@@ -288,13 +288,7 @@ class JSON_API_Core_Controller {
         }
         if ($data['fullname'] == '') {
             $errors['er_fullname'] = "Nhập họ và tên";
-        }
-
-        if ($data['dob'] == '') {
-            $errors['er_dob'] = "Nhập ngày tháng năm sinh";
-        } elseif (date("d-m-Y", strtotime($data['dob'])) != $data['dob']) {
-            $errors['er_dob'] = "Nhập ngày tháng năm sinh theo định dạng d-m-Y";
-        }
+        }        
         if ($data['email'] == '') {
             $errors['er_email'] = "Nhập địa chỉ email";
         } elseif (($this->utf8_strlen($data['email']) > 96) || !preg_match('/^[^\@]+@.*.[a-z]{2,15}$/i', $data['email'])) {
@@ -304,9 +298,16 @@ class JSON_API_Core_Controller {
         if ($data['cellphone'] == '') {
             $errors['er_cellphone'] = "Nhập số điện thoại";
         }
+        /*
+        if ($data['dob'] == '') {
+            $errors['er_dob'] = "Nhập ngày tháng năm sinh";
+        } elseif (date("d-m-Y", strtotime($data['dob'])) != $data['dob']) {
+            $errors['er_dob'] = "Nhập ngày tháng năm sinh theo định dạng d-m-Y";
+        }
         if ($this->utf8_strlen($data['address']) < 10) {
             $errors['er_address'] = "Nhập địa chỉ có ít nhất 10 ký tự";
-        }
+        }        
+        */
         if (!in_array($data['test_level'], array(1,2,3))) {
             $errors['er_test_level'] = "Chọn trình độ";
         }
@@ -352,13 +353,13 @@ class JSON_API_Core_Controller {
 
             $reg = array(
                 'id_number' => $_POST['id_number'],
-                'fullname' => $_POST['fullname'],
-                'dob' => date('Y-m-d', strtotime($_POST['dob'])),
-                'gender' => $_POST['gender'],
+                'fullname' => $_POST['fullname'],                
                 'email' => $_POST['email'],
                 'cellphone' => $_POST['cellphone'],
                 'location' => $_POST['location'],
-                'address' => $_POST['address'],
+                'gender' => '',
+                'dob' => '',
+                'address' => '',
                 'test_level' => $_POST['test_level'],
                 'register_date' => date('Y-m-d'),
                 'vietnamworks_location' => 29//TPHCM

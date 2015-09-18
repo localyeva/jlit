@@ -604,8 +604,15 @@ a:hover > .bo-intro {
 }
 */
 @media (max-width: 480px) {
+    .form-horizontal {
+        margin: 10px 20px;
+    }
+    .form-horizontal .form-group {
+        margin-left: 0px;
+    }
     .add-info {
         max-width: 97%;
+        padding-top: 10px !important;
     }
     .add-info-mid {
         margin-left: 0px;
@@ -658,20 +665,17 @@ a:hover > .bo-intro {
     .regis-red:hover {
         color: #ffffff;
     }
-    .regis{
-        font-size: 24px;
-    }
     .text-left{        
-        font-size: 10px;
+        font-size: 12px;
         left: 5% !important;
     }
     .text-left h4{        
-        font-size: 14px !important;
+        font-size: 16px !important;
         line-height: 30px !important;
     }
     .text-left a {
         background-color: #383334 !important;
-        padding: 2px 3px !important;
+        padding: 6px 6px !important;
     }
     .format-stand {
         max-width: 41%;
@@ -691,8 +695,14 @@ a:hover > .bo-intro {
         background-color: #383334;
         padding: 2px 3px;
     }
+    #class3 > h4, #class1 > h4, #class2 > h4{
+        font-size: 16px;
+    }
+    .mar-bt-20{
+        padding-left: 5px;
+    }
     .regis {
-        font-size: 30px;
+        font-size: 20px;
     }
     .learn-content {
         margin-left: 0px;
@@ -842,6 +852,13 @@ a:hover > .bo-intro {
     .add-info {
         padding-top: 20px;
         min-height: 120px;
+    }
+    #class1.add-info, #class2.add-info, #class3.add-info{
+        padding-top: 5px;
+        min-height: 70px;
+    }
+    #class1.add-info > h4, #class2.add-info > h4, #class3.add-info > h4{
+        margin-top: 0px;
     }
     .add-info-mid {
         border-top: 1px solid #ebeae8;
