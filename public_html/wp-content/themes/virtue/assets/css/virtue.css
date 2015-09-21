@@ -878,7 +878,9 @@ a:hover > .bo-intro {
     .learn-content .col-sm-6{
         display: inline-block;
     }
-    
+    .learn-content .right img {
+        margin-right: 43px;
+    }
     .learn-content img{
         width: 50px;
         height: 50px;
