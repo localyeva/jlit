@@ -7,7 +7,7 @@
     <div class="container bg1 mar-bt-100">
         <form class="form-horizontal" role="form" id="confirm" action="<?php bloginfo('siteurl') ?>?json=confirm" method="POST">
             <div class="row mar-bt-20">
-                <div class="col-md-6 col-xs-12">
+                <div class="col-md-12 col-xs-12">
                     <div class="form-group">
                         <input id="fullname" name="fullname" type="text" class="form-control" placeholder="Họ Tên" aria-describedby="basic-addon1">
                     </div>
@@ -15,7 +15,7 @@
                         <input id="email" name="email" type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
                     </div>
                 </div>
-                <div class="col-md-6 col-xs-12">
+                <div class="col-md-12 col-xs-12">
                     <div class="form-group">
                         <input id="id_number" name="id_number" type="text" class="form-control" placeholder="Số CMND" aria-describedby="basic-addon1">
                     </div>                    
@@ -39,6 +39,7 @@
                 </div>
                 <input type="hidden" id="class" name="test_level" value="-1">
             </div-->
+            <label>Chọn trình độ</label>
             <div class="row text-center mar-bt-20" style="padding-bottom: 15px">                
                 <div id="class3" class="col-sm-4 add-info">
                     <h4><?php echo $lang['m_test_level_i3']; ?></h4>
@@ -51,6 +52,7 @@
                 </div>
                 <input type="hidden" id="class" name="test_level" value="-1">
             </div>
+            <label>Chọn địa điểm</label>
             <div class="row text-center mar-bt-20">                
                 <div id="room1" class="col-sm-4 add-info">
                     <img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/location.png">

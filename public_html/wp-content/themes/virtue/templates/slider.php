@@ -8,9 +8,14 @@
         </div>                   
     </div><!-- grid -->  
 </div>
-
-<div id="note" class="container-fluid">
+<div class="container-fluid" id="note">
     <div>
-        <img class="img-responsive" style="width: 100%" alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/m-note.png">
+        <img src="<?php bloginfo('template_url'); ?>/assets/img/vir/note.png" alt="" style="width: 100%" class="img-responsive">
     </div>
 </div>
+<div class="container-fluid" id="mnote">
+    <div>
+        <img src="<?php bloginfo('template_url'); ?>/assets/img/vir/m-note.png" alt="" style="width: 100%" class="img-responsive">
+    </div>
+</div>
+

@@ -22,7 +22,6 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
     <h2 class="h2-red"><?php echo $lang['m_policy_scope']; ?></h2>
 </div>
 <div  class="container mar-t-50 bag-gray">
-    <div class="">
         <div class="row learn-content">
             <div class="col-sm-6 right center">
                 <img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/8.png">
@@ -33,11 +32,10 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
                 <p>Nghe hiểu</p>
             </div>
         </div>
-    </div>
 </div>
 <div class="container content">
     <div class="row no-mar mar-t-10" >
-        <div class="col-lg-4 none-padd">
+        <div class="col-sm-4 none-padd">
             <div class="title-red">
                 <span><span class="tit_head"><?php echo $scope[0]['post_title']; ?></span> - Cao cấp</span>
             </div>
@@ -45,7 +43,7 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
                 <p><?php echo $scope[0]['post_content']; ?></p>
             </div>
         </div>
-        <div class="col-lg-4 none-padd">
+        <div class="col-sm-4 none-padd">
             <div class="title-red">
                 <span><span class="tit_head"><?php echo $scope[1]['post_title']; ?></span> - Trung cấp</span>
             </div>
@@ -53,7 +51,7 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
                 <p><?php echo $scope[1]['post_content']; ?></p>
             </div>
         </div>
-        <div class="col-lg-4 none-padd">
+        <div class="col-sm-4 none-padd">
             <div class="title-red">
                 <span><span class="tit_head"><?php echo $scope[2]['post_title']; ?></span> - Sơ cấp</span>
             </div>
@@ -65,8 +63,8 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
 
 
 
-    <div class="row mar-t-50">
-        <div class="col-lg-4">            
+    <div class="row no-mar mar-t-50">
+        <div class="col-sm-4 none-padd">            
             <div class="intro-title"><a id="inline1" href="#target"><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arrow2.png">  <?php echo $p[1]['post_title']; ?></a></div>
             <a id="inline1" href="#target">
                 <div class="bo-intro">
@@ -86,7 +84,7 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-sm-4 none-padd">
             <div class="intro-title"><a id="inline2" href="#scop"><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arrow2.png"> <?php echo $p[2]['post_title']; ?></a></div>
             <a id="inline2" href="#scop">
                 <div class="bo-intro">
@@ -106,7 +104,7 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-sm-4 none-padd">
             <div class="intro-title"><a id="inline3" href="#mess"><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arrow2.png"> <?php echo $p[3]['post_title']; ?></a></div>
             <a id="inline3" href="#mess">
                 <div class="bo-intro">

@@ -4,14 +4,14 @@
 			<div class="footer-top">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-2 pad-t-70 padd-cent">
+						<div class="col-md-2 pad-t-70 padd-cent">
 							<img class="img-responsive" alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/vnw.png">
 						</div>
-						<div class="col-sm-3 txt-cent">
+						<div class="col-md-3 txt-cent">
 							<img class="img-responsive"  alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/evo.png">
 							<p>Email: jlit@evolable.asia</p>
 						</div>
-						<div class="col-sm-7 text-right">
+						<div class="col-md-7 text-right">
 							<div class="facebook">
 								<div id="fb-root"></div>
 								<script>(function(d, s, id) {
