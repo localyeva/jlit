@@ -1,11 +1,48 @@
 
 $(document).ready(function () {
-    $("a#inline1,a#inline2,a#inline3").fancybox({
-        'hideOnContentClick': true
+    $("a#inline1").fancybox({
+        'hideOnContentClick': true,
+        'scrolling': 'no',
+        afterShow: function(){
+            $(".inline1").nanoScroller({ alwaysVisible: true });
+        }
     });
-    $("a#voice1,a#voice2,a#voice3").fancybox({
-        'hideOnContentClick': true
+    $("a#inline2").fancybox({
+        'hideOnContentClick': true,
+        'scrolling': 'no',
+        afterShow: function(){
+            $(".inline2").nanoScroller({ alwaysVisible: true });
+        }
     });
+    $("a#inline3").fancybox({
+        'hideOnContentClick': true,
+        'scrolling': 'no',
+        afterShow: function(){
+            $(".inline3").nanoScroller({ alwaysVisible: true });
+        }
+    });
+    $("a#voice1").fancybox({
+        'hideOnContentClick': true,
+        'scrolling': 'no',
+        afterShow: function(){
+            $(".voice1").nanoScroller({ alwaysVisible: true });
+        }
+    });
+    $("a#voice2").fancybox({
+        'hideOnContentClick': true,
+        'scrolling': 'no',
+        afterShow: function(){
+            $(".voice2").nanoScroller({ alwaysVisible: true });
+        }
+    });
+    $("a#voice3").fancybox({
+        'hideOnContentClick': true,
+        'scrolling': 'no',
+        afterShow: function(){
+            $(".voice3").nanoScroller({ alwaysVisible: true });
+        }
+    });
+    
     
     $('#showLeft').click(function () {
         if ($('#navbar').hasClass('cbp-spmenu-open')) {

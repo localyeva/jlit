@@ -18,10 +18,10 @@ $limit = 100; ?>
         </div>
     </div>
     <div style="display: none">
-        <div id="voice_content1">
-            <div class="modal-content">
+        <div id="voice_content1" class="voice1 nano">
+            <div class="modal-content overthrow nano-content">
                 <div class="modal-header text-center">
-                    <h4 class="modal-title" id="myModalLabel"><img alt="<?php echo $p[0]['post_id']; ?>" src="<?php echo $p[0]['post_thumnail']; ?>" class="img-responsive"></h4>
+                    <h4 class="modal-title" id="myModalLabel"><img alt="<?php echo $p[0]['post_id']; ?>" src="<?php echo $p[0]['post_thumnail']; ?>"></h4>
                 </div>
                 <div class="modal-body text-format">
                     <?php echo $p[0]['post_content']; ?>
@@ -44,8 +44,8 @@ $limit = 100; ?>
         </div>
     </div>
     <div style="display: none">
-        <div id="voice_content2">
-            <div class="modal-content">
+        <div id="voice_content2" class="voice2 nano">
+            <div class="modal-content overthrow nano-content">
                 <div class="modal-header text-center">
                     <h4 class="modal-title" id="myModalLabel"><img alt="<?php echo $p[1]['post_id']; ?>" src="<?php echo $p[1]['post_thumnail']; ?>"></h4>
                 </div>
@@ -70,8 +70,8 @@ $limit = 100; ?>
         </div>
     </div>
     <div style="display: none">
-        <div id="voice_content3">
-            <div class="modal-content">
+        <div id="voice_content3" class="voice3 nano">
+            <div class="modal-content overthrow nano-content">
                 <div class="modal-header text-center">
                     <h4 class="modal-title" id="myModalLabel"><img alt="<?php echo $p[2]['post_id']; ?>" src="<?php echo $p[2]['post_thumnail']; ?>" class="img-responsive"></h4>
                 </div>

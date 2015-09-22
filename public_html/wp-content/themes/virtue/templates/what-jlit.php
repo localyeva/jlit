@@ -73,8 +73,8 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
             </a>
         </div>
         <div style="display: none">
-            <div id="target">
-                <div class="modal-content">
+            <div id="target" class="inline1 nano">
+                <div class="modal-content overthrow nano-content">
                     <div class="modal-header">
                         <h4 class="modal-title" id="myModalLabel"><?php echo $p[1]['post_title']; ?></h4>
                     </div>
@@ -93,8 +93,8 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
             </a>
         </div>
         <div style="display: none">
-            <div id="scop">
-                <div class="modal-content">
+            <div id="scop" class="inline2 nano">
+                <div class="modal-content overthrow nano-content">
                     <div class="modal-header">
                         <h4 class="modal-title" id="myModalLabel"><?php echo $p[2]['post_title']; ?></h4>
                     </div>
@@ -113,8 +113,8 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
             </a>
         </div>
         <div style="display: none">
-            <div id="mess">
-                <div class="modal-content">
+            <div id="mess" class="inline3 nano">
+                <div class="modal-content overthrow nano-content">
                     <div class="modal-header">
                         <h4 class="modal-title" id="myModalLabel"><?php echo $p[3]['post_title']; ?></h4>
                     </div>

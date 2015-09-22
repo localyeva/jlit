@@ -602,7 +602,26 @@ a:hover > .bo-intro {
     }
 }
 */
-
+.nano {
+    border: 1px solid #D3D3D3;
+    background: #fff;
+    //line-height: 30px;
+    height: 400px;
+    width: 600px;
+}
+.nano .nano-content {
+    padding-right: 20px;
+    width: 620px;
+}
+.nano .nano-pane {
+    background: f1f1f1;
+}
+.nano .nano-slider {
+    background: #09afed !important;
+}
+.fancybox-inner {
+    overflow: hidden !important;
+}
 #fixed-sequence {
     //height: 525px;
     margin: 0 auto;
@@ -676,6 +695,16 @@ a:hover > .bo-intro {
     margin-top: 23px;
 }
 @media (max-width: 480px) {
+    .nano {
+        border: 1px solid #D3D3D3;
+        background: #fff;
+        //line-height: 30px;
+        height: 300px;
+        width: 160px;
+    }
+    .nano .nano-content {
+        width: 180px;
+    }
     #fixed-sequence{
         height: 350px !important;
     }
@@ -728,10 +757,10 @@ a:hover > .bo-intro {
         padding-right: 15px;
     }
     #voice_content3 img, #voice_content2 img, #voice_content1 img{
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
     }
-    
+
     .dis-hide {
         display: none;
     }
@@ -931,6 +960,16 @@ a:hover > .bo-intro {
     }
 }
 @media (min-width: 481px) and (max-width: 767px) {
+    .nano {
+        border: 1px solid #D3D3D3;
+        background: #fff;
+        //line-height: 30px;
+        height: 500px;
+        width: 400px;
+    }
+    .nano .nano-content {
+        width: 420px;
+    }
     .regis{
         font-size: 35px;
     }
@@ -943,7 +982,7 @@ a:hover > .bo-intro {
         line-height: 45px;
         margin-bottom: auto;
     }
-    
+
     .format-stand {
         left: 7%;
         top: 5%;
@@ -1001,7 +1040,7 @@ a:hover > .bo-intro {
         margin-left: 10px;
         margin-right: 0px;
     }    
-    
+
     .pad-l-50 {
         padding-left: 55px;
         padding-top: 10px;
@@ -1055,7 +1094,7 @@ a:hover > .bo-intro {
         padding-bottom: 30px;
         padding-top: 50px;        
     }
-    
+
     .learn-content .col-sm-6.right{
         padding-left: 22%;
     }
