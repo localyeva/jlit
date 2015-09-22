@@ -359,6 +359,9 @@ h4 {
     height: 277px;
     cursor: pointer;
 }
+#message .img-responsive, #voice_content1 .img-responsive, #voice_content2 .img-responsive, #voice_content3 .img-responsive{
+    margin: 0 auto;
+}
 
 /* END Limit practice */
 /*JLIT Free */
@@ -643,7 +646,7 @@ a:hover > .bo-intro {
 }
 .text-left {
     left: 17%;
-    top: 20%;
+    top: 16%;
     max-width: 95%;
     text-shadow: none;
     text-transform: uppercase;
@@ -759,6 +762,9 @@ a:hover > .bo-intro {
         background-color: #383334 !important;
         padding: 6px 6px !important;
     }
+    .text-left .frame{
+        padding-bottom: 20px !important;
+    }
     .format-stand {
         max-width: 41%;
         left: 10%;
@@ -846,8 +852,12 @@ a:hover > .bo-intro {
         margin-left: 0px;
         margin-right: 0px;
     }
-    .text-left{
+    .text-left .frame{
         background: url("../img/bg1px.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+        padding-bottom: 30px;
+    }
+    .text-left img {
+        margin-top: 0px;
     }
     .head-img {
         background: url("../img/vir/mbanner.png") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);
