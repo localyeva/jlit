@@ -601,7 +601,7 @@ a:hover > .bo-intro {
 */
 
 #fixed-sequence {
-    height: 525px;
+    //height: 525px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -626,7 +626,7 @@ a:hover > .bo-intro {
     width: 100%;
 }*/
 .bg-height {
-    height: 525px;
+    height: 512px;
     position: relative;
 }
 .grid-pad {
