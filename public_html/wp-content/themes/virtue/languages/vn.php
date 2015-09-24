@@ -108,8 +108,13 @@
 
 
 	$lang['m_tphcm'] = "<strong> TP.HCM: <br> Văn Phòng VietnamWorks</strong><br>130 Sương Nguyệt Ánh, <br>P.Bến Thành, Q1";
+        $lang['m_tphcm_text'] = "TP.HCM: Văn Phòng VietnamWorks, 130 Sương Nguyệt Ánh, P.Bến Thành, Q1";
 	$lang['m_hanoi'] = "<strong> Hà Nội: <br> Văn Phòng VietnamWorks</strong><br>125-127 Bà Triệu, P.Nguyễn Du,<br> Quận Hai Bà Trưng";
+        $lang['m_hanoi_text'] = "Hà Nội: Văn Phòng VietnamWorks, 125-127 Bà Triệu, P.Nguyễn Du, Quận Hai Bà Trưng";
 	$lang['m_dn']="<strong> Đà Nẵng: <br> TBA</strong><br> XXX";
+        $lang['m_dn_text']="Đà Nẵng: TBA, XXX";
+        
+        $lang['m_register_sucess_message'] = 'Bạn đã đăng ký thành công!';
 
 	$lang['m_you_register_test_level'] = "Bạn đăng ký kiểm tra trình độ nào ?";
 	$lang['m_test_level_i1'] = "JI1(Cao cấp) :14:00~15:50";

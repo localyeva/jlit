@@ -373,7 +373,7 @@ class JSON_API_Core_Controller {
                 session_start();
                 $_SESSION['register'] = 1;
             }
-            $json['success'] = 'Bạn đã đăng ký thành công';
+            $json['success'] = $_SESSION['lang']['m_register_sucess_message'];
             //process for vietnamworks
             if (vietnamworks_is_exists($_POST['email']) == true) {
                 $_SESSION['new_member'] = 0;
@@ -387,6 +387,32 @@ class JSON_API_Core_Controller {
             $template_email = get_template_email_content('auto_reply_user_register');
             $send_subject = 'JLIT registeration: ' . __($template_email->title, 'wp_mail_smtp');
             $send_message = str_replace("{fullname}", $_POST['fullname'], $template_email->content);
+            $class = $room = "";
+            switch ($_POST['test_level']) {
+                case 1:
+                    $class = $_SESSION['lang']['m_test_level_i1'];
+                    break;
+                case 2:
+                    $class = $_SESSION['lang']['m_test_level_i2'];
+                    break;
+                default:
+                    $class = $_SESSION['lang']['m_test_level_i3'];
+                    break;
+            }
+            $send_message = str_replace("{class}", $class, $send_message);
+            switch ($_POST['location']) {
+                case 1:
+                    $room = $_SESSION['lang']['m_tphcm_text'];
+                    break;
+                case 2:
+                    $room = $_SESSION['lang']['m_hanoi_text'];
+                    break;
+                default:
+                    $room = $_SESSION['lang']['m_dn_text'];
+                    break;
+            }
+            $send_message = str_replace("{room}", $room, $send_message);
+            
             $send_message = str_replace("\\", "", $send_message);
             $send_message = __($send_message, 'wp_mail_smtp');
             add_filter('wp_mail_content_type', create_function('', 'return "text/html"; '));

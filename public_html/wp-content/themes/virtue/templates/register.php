@@ -132,12 +132,18 @@
             </div>
         </div>
     </div>
+    <div style="display:none">
+        <div class="container-fluid" id="alert" style="width: 200px; text-align: center">
+            <h4 id='msg'></h4>      
+        </div>
+    </div>
 </div>
 <script type="text/javascript">
     $('#dob').datetimepicker({
         timepicker:false,
         format:'d-m-Y'
     });
+    var success = false;
     $('#bt_submit').on('click', function () {
         $.ajax({
             url: '<?php bloginfo('siteurl') ?>?json=confirm',
@@ -184,9 +190,9 @@
                     $('#cclass' + $('#class').val()).show();
                     $('#croom1,#croom2,#croom3').hide();
                     $('#croom' + $('#room').val()).show();                   
-                    $.fancybox([
-                        {href: '#register'}
-                    ]);
+                    $.fancybox({
+                        href: '#register'
+                    });
                 }
             }
         });
@@ -229,8 +235,25 @@
                     }
                 }
                 if (json['success']) {
-                    $.fancybox.close();
-                    $('#confirm').before('<div class="success">' + json['success'] + '</div>');
+                    //$.fancybox.close();                    
+                    //$('#confirm').before('<div class="success">' + json['success'] + '</div>');
+                    //alert(json['success']);
+                    success = true;
+                    $('#msg').html(json['success']);
+                    $.fancybox({
+                        href: '#alert',
+                        afterClose:function () {
+                            $.fancybox.close();
+                            $('#fullname').val('');
+                            $('#email').val('');
+                            $('#id_number').val('');
+                            $('#cellphone').val('');
+                            $('#class1,#class2,#class3').removeClass('add-info-active');                                
+                            $('#room1,#room2,#room3').removeClass('add-info-active');
+                            $('#class').val('-1');
+                            $('#room').val('-1');
+                        }
+                    });                    
                 }
             }
         });
