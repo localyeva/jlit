@@ -82,7 +82,7 @@ function mediatheque_add_item(){
                             <label for="content">Content</label>
                         </th>
                         <td>
-                               <textarea name="content" id="content" style="height: 350px;"><?php echo $row->content; ?></textarea>
+                               <textarea name="content" id="content" style="height: 350px;"><?php echo stripslashes($row->content); ?></textarea>
                         </td>
                     </tr>
                     <tr class="form-field form-required">
