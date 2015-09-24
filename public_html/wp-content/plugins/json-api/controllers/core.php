@@ -288,7 +288,7 @@ class JSON_API_Core_Controller {
         }
         if ($data['fullname'] == '') {
             $errors['er_fullname'] = "Nhập họ và tên";
-        }        
+        }
         if ($data['email'] == '') {
             $errors['er_email'] = "Nhập địa chỉ email";
         } elseif (($this->utf8_strlen($data['email']) > 96) || !preg_match('/^[^\@]+@.*.[a-z]{2,15}$/i', $data['email'])) {
@@ -299,19 +299,19 @@ class JSON_API_Core_Controller {
             $errors['er_cellphone'] = "Nhập số điện thoại";
         }
         /*
-        if ($data['dob'] == '') {
-            $errors['er_dob'] = "Nhập ngày tháng năm sinh";
-        } elseif (date("d-m-Y", strtotime($data['dob'])) != $data['dob']) {
-            $errors['er_dob'] = "Nhập ngày tháng năm sinh theo định dạng d-m-Y";
-        }
-        if ($this->utf8_strlen($data['address']) < 10) {
-            $errors['er_address'] = "Nhập địa chỉ có ít nhất 10 ký tự";
-        }        
-        */
-        if (!in_array($data['test_level'], array(1,2,3))) {
+          if ($data['dob'] == '') {
+          $errors['er_dob'] = "Nhập ngày tháng năm sinh";
+          } elseif (date("d-m-Y", strtotime($data['dob'])) != $data['dob']) {
+          $errors['er_dob'] = "Nhập ngày tháng năm sinh theo định dạng d-m-Y";
+          }
+          if ($this->utf8_strlen($data['address']) < 10) {
+          $errors['er_address'] = "Nhập địa chỉ có ít nhất 10 ký tự";
+          }
+         */
+        if (!in_array($data['test_level'], array(1, 2, 3))) {
             $errors['er_test_level'] = "Chọn trình độ";
         }
-        if (!in_array($data['location'], array(1,2,3))) {
+        if (!in_array($data['location'], array(1, 2, 3))) {
             $errors['er_location'] = "Chọn địa điểm";
         }
         $jsons = $errors;
@@ -321,20 +321,18 @@ class JSON_API_Core_Controller {
     /* End Doanh Customize */
 
     public function confirm() {
-        $json = array();
-        if (!empty($this->valid($_POST))) {
-            $json['error'] = $this->valid($_POST);
-        } else {
-            $json['success'] = true;
-        }
-        ob_end_clean();
-        // Set HTTP Response Content Type
-        header('Content-Type: application/json; charset=utf-8');
-        // Format data into a JSON response
-        $json_response = json_encode($json);
-        // Deliver formatted data
-        echo $json_response;
-        exit();
+		$json = array();
+		$valid_post=$this->valid($_POST);
+		if(!empty($valid_post)){
+			$json['error']	=  $this->valid($_POST);
+		}
+		else{
+			$json['success'] = true;
+		}
+		ob_end_clean();
+		$json_encode = json_encode($json);
+		echo $json_encode;
+		die;
     }
 
     public function register() {
@@ -353,7 +351,7 @@ class JSON_API_Core_Controller {
 
             $reg = array(
                 'id_number' => $_POST['id_number'],
-                'fullname' => $_POST['fullname'],                
+                'fullname' => $_POST['fullname'],
                 'email' => $_POST['email'],
                 'cellphone' => $_POST['cellphone'],
                 'location' => $_POST['location'],
@@ -373,7 +371,7 @@ class JSON_API_Core_Controller {
 
             if ($res == 1) {
                 session_start();
-                $_SESSION['register'] = 1;                
+                $_SESSION['register'] = 1;
             }
             $json['success'] = 'Bạn đã đăng ký thành công';
             //process for vietnamworks
