@@ -321,18 +321,17 @@ class JSON_API_Core_Controller {
     /* End Doanh Customize */
 
     public function confirm() {
-		$json = array();
-		$valid_post=$this->valid($_POST);
-		if(!empty($valid_post)){
-			$json['error']	=  $this->valid($_POST);
-		}
-		else{
-			$json['success'] = true;
-		}
-		ob_end_clean();
-		$json_encode = json_encode($json);
-		echo $json_encode;
-		die;
+        $json = array();
+        $valid_post = $this->valid($_POST);
+        if (!empty($valid_post)) {
+            $json['error'] = $this->valid($_POST);
+        } else {
+            $json['success'] = true;
+        }
+        // ob_end_clean();
+        $json_encode = json_encode($json);
+        echo $json_encode;
+        die;
     }
 
     public function register() {
@@ -342,7 +341,8 @@ class JSON_API_Core_Controller {
             return;
         }
         /* Doanh Customize */
-        if (!empty($this->valid($_POST))) {
+        $valid_post = $this->valid($_POST);
+        if (!empty($valid_post)) {
             $json['error'] = $this->valid($_POST);
         } else {
             /* End Doanh Customize */
@@ -373,7 +373,8 @@ class JSON_API_Core_Controller {
                 session_start();
                 $_SESSION['register'] = 1;
             }
-            $json['success'] = $_SESSION['lang']['m_register_sucess_message'];
+            $reg_message = $_SESSION['lang'];
+            $json['success'] = $reg_message['m_register_sucess_message'];
             //process for vietnamworks
             if (vietnamworks_is_exists($_POST['email']) == true) {
                 $_SESSION['new_member'] = 0;
@@ -390,35 +391,35 @@ class JSON_API_Core_Controller {
             $class = $room = "";
             switch ($_POST['test_level']) {
                 case 1:
-                    $class = $_SESSION['lang']['m_test_level_i1'];
+                    $class = $reg_message['m_test_level_i1'];
                     break;
                 case 2:
-                    $class = $_SESSION['lang']['m_test_level_i2'];
+                    $class = $reg_message['m_test_level_i2'];
                     break;
                 default:
-                    $class = $_SESSION['lang']['m_test_level_i3'];
+                    $class = $reg_message['m_test_level_i3'];
                     break;
             }
             $send_message = str_replace("{class}", $class, $send_message);
             switch ($_POST['location']) {
                 case 1:
-                    $room = $_SESSION['lang']['m_tphcm_text'];
+                    $room = $reg_message['m_tphcm_text'];
                     break;
                 case 2:
-                    $room = $_SESSION['lang']['m_hanoi_text'];
+                    $room = $reg_message['m_hanoi_text'];
                     break;
                 default:
-                    $room = $_SESSION['lang']['m_dn_text'];
+                    $room = $reg_message['m_dn_text'];
                     break;
             }
             $send_message = str_replace("{room}", $room, $send_message);
-            
+
             $send_message = str_replace("\\", "", $send_message);
             $send_message = __($send_message, 'wp_mail_smtp');
             add_filter('wp_mail_content_type', create_function('', 'return "text/html"; '));
             $result = wp_mail($send_to, $send_subject, $send_message);
         }
-        ob_end_clean();
+        // ob_end_clean();
         // Set HTTP Response Content Type
         header('Content-Type: application/json; charset=utf-8');
         // Format data into a JSON response
