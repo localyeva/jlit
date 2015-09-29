@@ -699,11 +699,11 @@ a:hover > .bo-intro {
         border: 1px solid #D3D3D3;
         background: #fff;
         //line-height: 30px;
-        height: 300px;
-        width: 160px;
+        height: 350px;
+        width: 230px;
     }
     .nano .nano-content {
-        width: 180px;
+        width: 250px;
     }
     #fixed-sequence{
         height: 350px !important;
