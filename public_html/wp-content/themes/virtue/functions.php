@@ -240,7 +240,18 @@ function j_jlit(){
 	$res = $wpdb->get_results('select * from wp_candidate');	
 	$j = array();
 	foreach($res as $r){
-		$loc = ($r->location==HCMLOCATION?'Tp.HCM':'Ha Noi');
+		//$loc = ($r->location==HCMLOCATION?'Tp.HCM':'Ha Noi');
+                switch ($r->location) {
+                    case HCMLOCATION:
+                        $loc = 'Tp.HCM';
+                        break;
+                    case HANOILOCATION:
+                        $loc = 'Ha Noi';
+                        break;
+                    default:
+                        $loc = 'Da Nang';
+                        break;
+                }
 		$j[] = array(
 			'id' => $r->id,
 			'id_number' => $r->id_number,

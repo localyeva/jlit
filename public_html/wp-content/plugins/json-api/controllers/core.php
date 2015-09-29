@@ -363,8 +363,12 @@ class JSON_API_Core_Controller {
                 'vietnamworks_location' => 29//TPHCM
             );
 
-            if ($_POST['location'] == HANOILOCATION) {
+            if ($_POST['location'] == HCMLOCATION) {
+                $reg['vietnamworks_location'] = 29; //TPHCM
+            }else if($_POST['location'] == HANOILOCATION){
                 $reg['vietnamworks_location'] = 24; //HaNoi
+            }else{
+                $reg['vietnamworks_location'] = 24; //DaNang
             }
 
             $res = j_register($reg);
