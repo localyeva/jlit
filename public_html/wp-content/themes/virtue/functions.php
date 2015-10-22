@@ -417,7 +417,8 @@ function vietnamworks_is_exists($email){
 */
 function vietnamworks_register($user){   	
 	$apiKey     = API_KEY;
-	$apiHost    = 'https://api.vietnamworks.com';	
+	$apiHost    = 'https://api-staging.vietnamworks.com';	
+//	$apiHost    = 'https://api.vietnamworks.com';
 	$apiPath    = '/users/register';
 	//print_r($user);
 	$genderid = ($user['gender']=='Male')?'1':'0';

@@ -90,15 +90,15 @@
 	$lang['m_3_times'] = "3 ca";
 	$lang['m_3_times_content'] = "JI3:8:30~10:30, JI2:11:00~13:00, JI1:14:00~15:50";
 	
-	$lang['m_preferred_first_time'] = "JI3(Sơ cấp):8:30~10:30";
-	$lang['m_preferred_second_time'] = "JI2(Trung cấp):11:00~13:00";
-	$lang['m_preferred_third_time'] = "JI1(Cao cấp):14:00~15:50";
+	$lang['m_preferred_first_time'] = "JI3(Sơ cấp):9:00~11:30";
+	$lang['m_preferred_second_time'] = "JI2(Trung cấp):9:00~11:30";
+	$lang['m_preferred_third_time'] = "JI1(Cao cấp):9:00~11:30";
 	$lang['m_preferred_first_date'] = "20/06/2015";
 	$lang['m_preferred_second_date'] = "20/06/2015";
 
-	$lang['m_preferred_first_time_hn'] = "JI3(Sơ cấp):8:30~10:30";
-	$lang['m_preferred_second_time_hn'] = "JI2(Trung cấp):11:00~13:00";
-	$lang['m_preferred_third_time_hn'] = "JI1(Cao cấp):14:00~15:50";
+	$lang['m_preferred_first_time_hn'] = "JI3(Sơ cấp):9:00~11:30";
+	$lang['m_preferred_second_time_hn'] = "JI2(Trung cấp):9:00~11:30";
+	$lang['m_preferred_third_time_hn'] = "JI1(Cao cấp):9:00~11:30";
 	$lang['m_preferred_first_date_hn'] = "20/04/2015";
 	$lang['m_preferred_second_date_hn'] = "21/04/2015";
 	
@@ -107,19 +107,19 @@
 	$lang['m_venue_add'] = "130 Sương Nguyệt Ánh, Bến Thành, Quận 1, Tp.Hồ Chí Minh";
 
 
-	$lang['m_tphcm'] = "<strong> TP.HCM: <br> Văn Phòng VietnamWorks</strong><br>130 Sương Nguyệt Ánh, <br>P.Bến Thành, Q1";
+	$lang['m_tphcm'] = "<strong> TP.HCM: <br> Hội trường công ty Itaxa</strong><br>toà nhà C, Công ty Số 126 Nguyễn Thị Minh Khai, Phường 6, Q3,HCM";
         $lang['m_tphcm_text'] = "TP.HCM: Văn Phòng VietnamWorks, 130 Sương Nguyệt Ánh, P.Bến Thành, Q1";
-	$lang['m_hanoi'] = "<strong> Hà Nội: <br> Văn Phòng VietnamWorks</strong><br>125-127 Bà Triệu, P.Nguyễn Du,<br> Quận Hai Bà Trưng";
-        $lang['m_hanoi_text'] = "Hà Nội: Văn Phòng VietnamWorks, 125-127 Bà Triệu, P.Nguyễn Du, Quận Hai Bà Trưng";
-	$lang['m_dn']="<strong> Đà Nẵng: <br> TBA</strong><br> XXX";
-        $lang['m_dn_text']="Đà Nẵng: TBA, XXX";
+	$lang['m_hanoi'] = "<strong> Hà Nội: <br> Toà nhà Trung tâm Đào tạo CNTT & Truyền thông Hà Nội</strong><br>P210 lầu 2, 1 Hoàng Đạo Thuý, Nhân Chính, Thanh Xuân, Hà Nội";
+        $lang['m_hanoi_text'] = "P210, 2nd floor, Toà nhà Trung tâm Đào tạo CNTT & Truyền thông Hà Nội, 1 Hoàng Đạo Thuý, Nhân Chính, Thanh Xuân";
+	$lang['m_dn']="<strong> Đà Nẵng: <br> Da Nang software park</strong><br> Floor No. 5, Số 2 Quang Trung, Thành phố Đà Nẵng";
+        $lang['m_dn_text']="Đà Nẵng: Floor No. 5, Số 2 Quang Trung, Thành phố Đà Nẵng";
         
         $lang['m_register_sucess_message'] = 'Bạn đã đăng ký thành công!';
 
 	$lang['m_you_register_test_level'] = "Bạn đăng ký kiểm tra trình độ nào ?";
-	$lang['m_test_level_i1'] = "JI1(Cao cấp) :14:00~15:50";
-	$lang['m_test_level_i2'] = "JI2(Trung cấp) :11:00~13:00";
-	$lang['m_test_level_i3'] = "JI3(Sơ cấp) :8:30~10:30";
+	$lang['m_test_level_i1'] = "JI1(Cao cấp)<br>  :9:00~11:30 13/12";
+	$lang['m_test_level_i2'] = "JI2(Trung cấp)<br> :9:00~11:30 13/12";
+	$lang['m_test_level_i3'] = "JI3(Sơ cấp)<br>  :9:00~11:30 13/12";
 	
 	$lang['m_user_address'] = "Địa chỉ";
 	$lang['m_preferred_date'] = "Chọn ngày";

@@ -403,6 +403,7 @@ a:hover > .bo-intro {
 .text-format {
     text-align: justify;
     text-justify: inter-word;
+    font-family: 'Arial';
 }
 /* End JLIT Free */
 

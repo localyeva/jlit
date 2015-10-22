@@ -22,7 +22,7 @@ define('DB_NAME', 'jlitreal_db');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'doanh');
+define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -69,6 +69,14 @@ $table_prefix  = 'wp_';
  * in their development environments.
  */
 define('WP_DEBUG', false);
+
+define('FS_METHOD', 'direct');
+
+// Disable Plugin and Theme Update and Installation
+//define( 'DISALLOW_FILE_MODS', true );
+
+// Disable all automatic updates:
+// define( 'AUTOMATIC_UPDATER_DISABLED', true );
 
 /* That's all, stop editing! Happy blogging. */
 
