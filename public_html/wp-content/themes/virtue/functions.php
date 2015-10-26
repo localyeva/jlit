@@ -372,6 +372,19 @@ function j_excel(){
     }
 }
 
+function get_vietnamworks_options(){
+    $theme_option = get_option('my_theme_option');
+    $args = array();
+    if ($theme_option['ct_real_staging'] == 'real'){
+        $args['host'] = $theme_option['ct_vnw_url'];
+        $args['api'] = $theme_option['ct_vnw_api_key'];
+    } elseif($theme_option['ct_real_staging'] == 'staging'){
+        $args['host'] = $theme_option['ct_vnw_url_staging'];
+        $args['api'] = $theme_option['ct_vnw_api_key_staging'];
+    }
+    return $args;
+}
+
 /*Status: 
     * NEW : not exists
     * NON_ACTIVATED : registered but dont't active
@@ -379,8 +392,11 @@ function j_excel(){
   */
 function vietnamworks_is_exists($email){	
 	$res = false;
-	$apiKey         = API_KEY;	
-	$apiHost        = 'https://api.vietnamworks.com';
+        //
+        $options = get_vietnamworks_options();
+	$apiKey         = $options['api'];
+	$apiHost        = $options['host'];
+        //
 	$apiPath        = '/users/account-status/';
 	$emailToCheck   = $email;
 	$ch = curl_init();
@@ -415,10 +431,12 @@ function vietnamworks_is_exists($email){
 * Success and userId: 3666686    
 * Duplicate
 */
-function vietnamworks_register($user){   	
-	$apiKey     = API_KEY;
-	$apiHost    = 'https://api-staging.vietnamworks.com';	
-//	$apiHost    = 'https://api.vietnamworks.com';
+function vietnamworks_register($user){
+        //
+        $options = get_vietnamworks_options();
+	$apiKey         = $options['api'];
+	$apiHost        = $options['host'];
+        //
 	$apiPath    = '/users/register';
 	//print_r($user);
 	$genderid = ($user['gender']=='Male')?'1':'0';
@@ -487,3 +505,37 @@ function get_template_email_content($keyname){
        }
        return null;
 }
+
+function remove_menus_from_plugins() {
+
+    remove_menu_page('edit.php?post_type=acf');     // ACF
+    remove_menu_page('cptui_main_menu');          // CPT
+}
+
+add_action('admin_init', 'remove_menus_from_plugins');
+
+function remove_menus() {
+
+    global $user_ID;
+
+    $user = new WP_User($user_ID);
+    $roles = $user->roles;
+    $role = $roles[0];
+    $arr_roles = array('editor');
+
+    if (in_array($role, $arr_roles)) {
+        remove_menu_page('index.php');                  //Dashboard
+        remove_menu_page('edit.php');                   //Posts
+        remove_menu_page('upload.php');                 //Media
+        remove_menu_page('edit.php?post_type=page');    //Pages
+        remove_menu_page('edit-comments.php');          //Comments
+        remove_menu_page('themes.php');                 //Appearance
+        remove_menu_page('plugins.php');                //Plugins
+        remove_menu_page('admin.php?page=metaslider'); 
+        remove_menu_page('users.php');                  //Users
+        remove_menu_page('tools.php');                  //Tools
+        remove_menu_page('options-general.php');        //Settings
+    }
+}
+
+add_action('admin_menu', 'remove_menus');

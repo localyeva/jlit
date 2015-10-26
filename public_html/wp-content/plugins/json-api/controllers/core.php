@@ -5,8 +5,6 @@
   Controller description: Basic introspection methods
  */
 
-define('API_KEY', 'f23a7350e699792634ace077a79c6821628387e2bc95da5307192f277edc3c07');
-
 class JSON_API_Core_Controller {
 
     public function info() {
