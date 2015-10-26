@@ -539,3 +539,15 @@ function remove_menus() {
 }
 
 add_action('admin_menu', 'remove_menus');
+
+function login_redirect( $redirect_to, $request, $user ){
+    $roles = $user->roles;
+    $role = $roles[0];
+    $arr_roles = array('editor');
+
+    if (in_array($role, $arr_roles)) {
+        return admin_url().'?page=workpress-api-setting';
+    }
+    return admin_url();    
+}
+add_filter( 'login_redirect', 'login_redirect', 10, 3 );
