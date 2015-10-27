@@ -3182,6 +3182,10 @@ EOF;
 	}
 	
 	function admin_bar_menu() {
+                global $current_user;
+                if($current_user->user_login == API_MANAGER_NAME){
+                    return;
+                }
 		global $wp_admin_bar, $aioseop_admin_menu, $aioseop_options, $post;
 		if ( !empty( $aioseop_options['aiosp_admin_bar'] ) ) {
 			$menu_slug = plugin_basename( __FILE__ );

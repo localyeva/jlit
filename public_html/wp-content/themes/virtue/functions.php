@@ -536,11 +536,11 @@ function remove_menus() {
         remove_menu_page('users.php');                  //Users
         remove_menu_page('tools.php');                  //Tools
         remove_menu_page('options-general.php');        //Settings        
+        //show_admin_bar( true );
     }
 }
 
 add_action('admin_menu', 'remove_menus');
-
 
 function login_redirect( $redirect_to, $request, $user ){
     if ($user->user_login == API_MANAGER_NAME){
@@ -550,3 +550,28 @@ function login_redirect( $redirect_to, $request, $user ){
 }
 add_filter( 'login_redirect', 'login_redirect', 10, 3 );
 define(API_MANAGER_NAME, 'vietnamworks');
+
+
+add_action( 'admin_bar_menu', 'remove_wp_logo', 999 );
+function remove_wp_logo( $wp_admin_bar ) {
+    $current_user = wp_get_current_user();
+    if ($current_user->user_login == API_MANAGER_NAME) {
+        $wp_admin_bar->remove_node( 'wp-logo' );
+        $wp_admin_bar->remove_node( 'site-name' );
+        $wp_admin_bar->remove_node( 'updates' );
+        $wp_admin_bar->remove_node( 'comments' );
+        $wp_admin_bar->remove_node( 'new-content' );
+        $wp_admin_bar->remove_node( 'all-in-one-seo-pack' );
+    }
+    
+}
+
+
+add_action('after_setup_theme', 'remove_admin_bar');
+function remove_admin_bar() {
+    $current_user = wp_get_current_user();
+    
+    if ($current_user->user_login == API_MANAGER_NAME) {
+      //show_admin_bar(false);
+    }
+}
