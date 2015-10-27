@@ -73,10 +73,12 @@ define('WP_DEBUG', false);
 define('FS_METHOD', 'direct');
 
 // Disable Plugin and Theme Update and Installation
-//define( 'DISALLOW_FILE_MODS', true );
+// define( 'DISALLOW_FILE_MODS', true );
 
 // Disable all automatic updates:
 // define( 'AUTOMATIC_UPDATER_DISABLED', true );
+
+// define( 'WP_AUTO_UPDATE_CORE', false );
 
 /* That's all, stop editing! Happy blogging. */
 
