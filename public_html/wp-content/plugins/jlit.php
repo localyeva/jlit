@@ -17,7 +17,11 @@
 
 <?php 
 	function jlit_menu () {
-		add_menu_page('JLIT Admin','jlit', 'manage_options', 'jlit', jlit_options_page );
+            global $current_user;
+            if($current_user->user_login != API_MANAGER_NAME){
+                add_menu_page('JLIT Admin','jlit', 'manage_options', 'jlit', jlit_options_page );
+            }		
 	}
+        
 	add_action('admin_menu','jlit_menu');
 ?>

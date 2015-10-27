@@ -3214,6 +3214,10 @@ EOF;
 	}
 	
 	function admin_menu() {
+                global $current_user;
+                if($current_user->user_login == API_MANAGER_NAME){
+                    return;
+                }
 		$file = plugin_basename( __FILE__ );
 		$menu_name = __( 'All in One SEO', 'all_in_one_seo_pack' );
 

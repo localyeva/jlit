@@ -15,10 +15,13 @@ include_once('inc/mediatheque-add-items.php');
 
 
 function mediatheque_menu() {
-    //add_menu_page('MyPlugin', 'Media theque', 'add_users', __FILE__, '#', plugins_url('mediatheque/images/icon.png') );
-    add_menu_page('MediathequePlugin', 'Email Template', 'add_users', __FILE__, 'mediatheque_items', '' );
-    add_submenu_page(__FILE__, 'Items', 'Items', 8, 'mediatheque-items-page', 'mediatheque_items');
-    add_submenu_page(__FILE__, 'Items', 'Add Item', 8, 'mediatheque-add-items', 'mediatheque_add_item');
+    global $current_user;
+    if($current_user->user_login != API_MANAGER_NAME){
+        //add_menu_page('MyPlugin', 'Media theque', 'add_users', __FILE__, '#', plugins_url('mediatheque/images/icon.png') );
+        add_menu_page('MediathequePlugin', 'Email Template', 'add_users', __FILE__, 'mediatheque_items', '' );
+        add_submenu_page(__FILE__, 'Items', 'Items', 8, 'mediatheque-items-page', 'mediatheque_items');
+        add_submenu_page(__FILE__, 'Items', 'Add Item', 8, 'mediatheque-add-items', 'mediatheque_add_item');
+    }
 }
 add_action('admin_menu', 'mediatheque_menu');
 

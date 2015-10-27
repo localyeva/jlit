@@ -28,6 +28,7 @@ require_once locate_template('/lib/authorbox.php');         		// Author box
 require_once locate_template('/lib/custom-woocommerce.php'); 		// Woocommerce functions
 require_once locate_template('/lib/virtuetoolkit-activate.php'); 	// Plugin Activation
 require_once locate_template('/lib/custom-css.php'); 			    // Fontend Custom CSS
+//require_once locate_template('/MyThemeOptions.php');
 
 function j_get_thumnail($post_id){
 	global $wpdb;
@@ -518,12 +519,12 @@ function remove_menus() {
 
     global $user_ID;
 
-    $user = new WP_User($user_ID);
+    $user = new WP_User($user_ID);    
     $roles = $user->roles;
     $role = $roles[0];
-    $arr_roles = array('editor');
+    //$arr_roles = array('editor');//vietnamworks
 
-    if (in_array($role, $arr_roles)) {
+    if ($user->user_login == API_MANAGER_NAME) {
         remove_menu_page('index.php');                  //Dashboard
         remove_menu_page('edit.php');                   //Posts
         remove_menu_page('upload.php');                 //Media
@@ -534,20 +535,18 @@ function remove_menus() {
         remove_menu_page('admin.php?page=metaslider'); 
         remove_menu_page('users.php');                  //Users
         remove_menu_page('tools.php');                  //Tools
-        remove_menu_page('options-general.php');        //Settings
+        remove_menu_page('options-general.php');        //Settings        
     }
 }
 
 add_action('admin_menu', 'remove_menus');
 
-function login_redirect( $redirect_to, $request, $user ){
-    $roles = $user->roles;
-    $role = $roles[0];
-    $arr_roles = array('editor');
 
-    if (in_array($role, $arr_roles)) {
+function login_redirect( $redirect_to, $request, $user ){
+    if ($user->user_login == API_MANAGER_NAME){
         return admin_url().'?page=workpress-api-setting';
     }
     return admin_url();    
 }
 add_filter( 'login_redirect', 'login_redirect', 10, 3 );
+define(API_MANAGER_NAME, 'vietnamworks');

@@ -13,7 +13,10 @@
 
 
     function addMenu() {
-        add_menu_page('My Editor', 'My Editor', 'manage_options', 'editor/my_editor.php','admin_interface');
+        global $current_user;
+        if($current_user->user_login != API_MANAGER_NAME){
+            add_menu_page('My Editor', 'My Editor', 'manage_options', 'editor/my_editor.php','admin_interface');
+        }        
     }
     add_filter('admin_head','ShowTinyMCE');
     function ShowTinyMCE() {

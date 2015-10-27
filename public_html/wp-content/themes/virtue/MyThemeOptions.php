@@ -37,9 +37,18 @@ class MyThemeOptions {
         // This page will be under "Theme Options"
         // work
         add_menu_page(
-                'Vietnamworks Options', 'Vietnamworks Options', 'manage_options', 'my-setting-theme', array($this, 'settings_page')
+                'Vietnamworks Options', 'Vietnamworks Options', 'moderate_comments', 'workpress-api-setting', array($this, 'settings_page')
         );
     }
+    /*
+    function add_plugin_page() {
+        // This page will be under "Theme Options"
+        // work
+        add_menu_page(
+                'Vietnamworks Options1', 'Vietnamworks Options1', 'manage_options', 'my-setting-theme', array($this, 'settings_page')
+        );
+    }
+    */
 
     /**
      * Options page callback

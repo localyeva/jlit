@@ -245,21 +245,24 @@ add_action( 'user_register', 'block_newly_created_user');
  */
 function elbw_baw_create_menu()
 {
-    //$elbw_current_user = wp_get_current_user();
-    global $wisdm_current_logged_in_user_id;
-    $elbw_temp = '(' . $wisdm_current_logged_in_user_id . ')';
+    global $current_user;
+    if($current_user->user_login != API_MANAGER_NAME){
+        //$elbw_current_user = wp_get_current_user();
+        global $wisdm_current_logged_in_user_id;
+        $elbw_temp = '(' . $wisdm_current_logged_in_user_id . ')';
 
-    $elbw_temp = strpos(get_option('elbw_locked_users'), $elbw_temp);
+        $elbw_temp = strpos(get_option('elbw_locked_users'), $elbw_temp);
 
 
-    if ($elbw_temp === FALSE)
-    {
-	$myicon = plugins_url() . "/editor-lock-by-wisdmlabs/images/icon.png";
-	//create new top-level menu
-	add_menu_page('Editor Lock Settings', 'Editor Lock', 'administrator', __FILE__, 'elbw_baw_settings_page', $myicon);
+        if ($elbw_temp === FALSE)
+        {
+            $myicon = plugins_url() . "/editor-lock-by-wisdmlabs/images/icon.png";
+            //create new top-level menu
+            add_menu_page('Editor Lock Settings', 'Editor Lock', 'administrator', __FILE__, 'elbw_baw_settings_page', $myicon);
 
-	//call register settings function
-	add_action('admin_menu', 'elbw_register_mysettings');
+            //call register settings function
+            add_action('admin_menu', 'elbw_register_mysettings');
+        }
     }
 }
 
