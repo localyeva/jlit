@@ -376,16 +376,15 @@ function j_excel(){
 function get_vietnamworks_options(){
     $theme_option = get_option('my_theme_option');
     $args = array();
-    if ($theme_option['ct_real_staging'] == 'real'){
+    if ($theme_option['ct_vnw_real_staging'] == 'real'){
         $args['host'] = $theme_option['ct_vnw_url'];
         $args['api'] = $theme_option['ct_vnw_api_key'];
-    } elseif($theme_option['ct_real_staging'] == 'staging'){
+    } elseif($theme_option['ct_vnw_real_staging'] == 'staging'){
         $args['host'] = $theme_option['ct_vnw_url_staging'];
         $args['api'] = $theme_option['ct_vnw_api_key_staging'];
     }
     return $args;
 }
-
 /*Status: 
     * NEW : not exists
     * NON_ACTIVATED : registered but dont't active
@@ -440,7 +439,7 @@ function vietnamworks_register($user){
         //
 	$apiPath    = '/users/register';
 	//print_r($user);
-	$genderid = ($user['gender']=='Male')?'1':'0';
+	$genderid = ($user['gender']=='Male')?1:2;
 	$fullname = explode(' ', $user['fullname']);
 	$firstname  = '';
 	$lastname= '';
@@ -486,17 +485,20 @@ function vietnamworks_register($user){
 	$response = curl_exec($ch);
 	$responseArray = (array)json_decode($response, true);
 	//print_r($responseArray);
+        global $wpdb;
 	if ($responseArray['meta']['code'] == 400) { // error happened
 	    //echo 'Server returned an error with message: '.$responseArray['meta']['message'];
+            $res = $wpdb->insert('wp_vietnamworks_log', array('email'=>$user['email'], 'code'=>400, 'message'=>$responseArray['meta']['message']));
 	} elseif ($responseArray['meta']['code'] == 200)  {
 	    //success => return userId: 303602848
 	    //echo "Response status: ".$responseArray['meta']['message']."\nNew userID: ".$responseArray['data']['userID'];
+            $res = $wpdb->insert('wp_vietnamworks_log', array('email'=>$user['email'], 'code'=>200, 'message'=>$responseArray['meta']['message']."\nNew userID: ".$responseArray['data']['userID']));
 	} else {
 	    //unknown error
 	    $info = curl_getinfo($ch);
 	    //echo "An error happened: \n".curl_error($ch)."\nInformation: ".print_r($info, true)."\nResponse: $response";
 	}
-	curl_close($ch);    
+	curl_close($ch);
 }
 function get_template_email_content($keyname){
        global $wpdb;
@@ -549,7 +551,7 @@ function login_redirect( $redirect_to, $request, $user ){
     return admin_url();    
 }
 add_filter( 'login_redirect', 'login_redirect', 10, 3 );
-define(API_MANAGER_NAME, 'vietnamworks');
+define(API_MANAGER_NAME, 'api-register');
 
 
 add_action( 'admin_bar_menu', 'remove_wp_logo', 999 );
