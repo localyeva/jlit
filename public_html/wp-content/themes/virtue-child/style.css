@@ -1,0 +1,27 @@
+/*
+Theme Name: Virtue Child
+Theme URI: leduongkhang@gmail.com
+Description: 
+Version: 0.1
+Author: Le Duong Khang
+Author URI: leduongkhang@gmail.com
+Template: virtue
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+Text Domain: virtue-child
+*/
+
+@import url("../virtue/style.css");
+
+#notification{
+    background: #CF1427;
+}
+
+#notification article.notification{
+    text-align: center;
+    font-size: 2.5em;
+    padding: 10px;
+    color: #fff;
+    line-height: 1.5em; 
+}
