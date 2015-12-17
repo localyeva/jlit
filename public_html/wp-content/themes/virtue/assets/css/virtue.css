@@ -104,6 +104,9 @@ h6 {
     font-family: 'Roboto', sans-serif;
 }
 
+#side-nav {
+    float: left;
+}
 #side-nav a:hover{
     background-color: #BF1E2E;
     color: #ffffff;
@@ -1187,7 +1190,6 @@ a:hover > .bo-intro {
         padding-left: 53px;
     }
     .footer-top .padd-cent {
-        //padding-left: 57px;
     }
     .footer-top .img-right {
         margin-left: 95px;
@@ -1243,3 +1245,16 @@ a:hover > .bo-intro {
     }
 }
 */
+
+
+#language_flag {
+    float:left;
+}
+#language_flag ul  li{
+    display: inline;
+}
+#language_flag ul {
+    margin: 10px;
+    list-style-type: none;
+    text-align: center;
+}

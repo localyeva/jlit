@@ -1,7 +1,7 @@
 <?php	
-	$lang['m_home_page'] = "Trang chủ";
-	$lang['m_what_is_jlit'] = "JLIT là gì";
-	$lang['m_jlit_news'] = "Tin tức";
+	$lang['m_home_page'] = "m_home_page";
+	$lang['m_what_is_jlit'] = "m_what_is_jlit";
+	$lang['m_jlit_news'] = "m_jlit_news";
 	$lang['m_policy_scope'] = "Nội dung bài thi";
 	$lang['m_policy'] = "Cơ chế thi";
 	$lang['m_scope'] = "Phạm vi thi";

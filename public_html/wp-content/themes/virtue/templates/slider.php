@@ -1,10 +1,11 @@
+<?php $lang = $_SESSION['lang']; ?>
 <div class="bg head-img" id="fixed-sequence" style="background-size: cover;">
     <div class="row bg-height">
         <div class="col-xs-6 col-md-4 text-left text-left-head">
             <div class="frame">
-            <h4>Kì thi năng lực nhật ngữ cho chuyên ngành IT</h4>
-            <p>Japanse literacy & IT Test(JLIT)</p>
-            <a href="#form-register">Đăng ký miễn phí</a><br>
+            <h4><?php echo $lang['m_slider_h4_label']; ?></h4>
+            <p><?php echo $lang['m_slider_en_banner']; ?></p>
+            <a href="#form-register"><?php echo $lang['m_slider_free_register']; ?></a><br>
             </div>
             <img class="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arrow.png" alt="">
         </div>                   

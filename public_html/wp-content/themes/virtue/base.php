@@ -3,7 +3,14 @@ if (is_404()) {
     header('Location: /');
 }
 ?>
-<?php include_once 'languages/vn.php'; ?>
+<?php
+$language_file = 'languages/vn.php';
+$current_language = '';
+if ($_REQUEST['lang'] == 'ja') {
+    $language_file = 'languages/ja.php';
+}
+?>
+<?php include_once $language_file; ?>
 <?php session_start(); ?>
 <?php $_SESSION['lang'] = $lang; ?>
 <?php $domain = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST']; ?>
@@ -47,18 +54,18 @@ get_template_part('templates/header');
         get_template_part('templates/box-exam');
     }
     ?>
-<?php //include kadence_template_path();  ?>            
+    <?php //include kadence_template_path();  ?>            
     <?php if (kadence_display_sidebar()) : ?>
         <aside class="<?php echo kadence_sidebar_class(); ?> kad-sidebar" role="complementary">
-        <div class="sidebar">
+            <div class="sidebar">
         <?php //include kadence_sidebar_path();  ?>
-        </div>
+            </div>
         </aside><
-    <?php endif; ?>
-    </div>
-    </div>
+<?php endif; ?>
+</div>
+</div>
 <?php get_template_part('templates/footer'); ?>
-    </div>
+</div>
 
 
 

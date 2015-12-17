@@ -28,7 +28,7 @@
                                 <a href="<?php echo home_url(); ?>"> <?php echo $lang['m_home_page']; ?></a>
                             </li>
                             <li>
-                                <a href="#form-register"> Đăng ký </a>
+                                <a href="#form-register"> <?php echo $lang['m_register']; ?></a>
                             </li>
                             <li>
                                 <a href="#what-jlit"> <?php echo $lang['m_what_is_jlit']; ?> </a>
@@ -59,7 +59,7 @@
                             if (!empty($virtue['x1_virtue_logo_upload']['url'])) {
                                 ?> <div id="thelogo"><img src="<?php echo esc_url($virtue['x1_virtue_logo_upload']['url']); ?>" alt="<?php bloginfo('name'); ?>" class="kad-standard-logo flogo-m jlit-logo img-responsive" />
                                 <?php if (!empty($virtue['x2_virtue_logo_upload']['url'])) { ?> 
-                                        <img src="<?php echo esc_url($virtue['x2_virtue_logo_upload']['url']); ?>" class="kad-retina-logo jlit-logo" style="max-height:<?php echo $virtue['x1_virtue_logo_upload']['height']; ?>px" /> <?php } ?>
+                                        <?php } ?>
                                 </div> <?php
                             } else {
                                 bloginfo('name');
@@ -88,7 +88,7 @@
                                     <a href="<?php echo home_url(); ?>"> <?php echo $lang['m_home_page']; ?></a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="#form-register"> Đăng ký </a>
+                                    <a href="#form-register"> <?php echo $lang['m_register']; ?> </a>
                                 </li>
                                 <li class="dropdown">
                                     <a href="#what-jlit"> <?php echo $lang['m_what_is_jlit']; ?> </a>
@@ -107,8 +107,18 @@
                                     <a href="#message"> <?php echo $lang['m_voice']; ?></a>
                                 </li>
                             </ul>
+                            
+                        </div>
+                        <div id="language_flag">
+                            <?php echo qtranxf_generateLanguageSelectCode('image'); ?>
                         </div>
                     </div>
+                    
+                    
                 </nav>	
             </div>
+            <div>
+                
+            </div>
+            
         </div>
