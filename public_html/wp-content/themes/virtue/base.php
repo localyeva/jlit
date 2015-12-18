@@ -21,8 +21,15 @@ get_template_part('templates/header');
 ?>  
 <div class="wrap content" role="document">    
     <?php get_template_part('templates/slider'); ?>
+    
+    <?php 
+    //slider-note
+    get_template_part('templates/slider-note');
+    //end slider-note
+    ?>
+    
     <?php if(function_exists('get_virtue_child_notification_check') && get_virtue_child_notification_check()): ?>
-        <?php get_template_part('templates/notification'); ?>
+    <?php get_template_part('templates/notification'); ?>
     <?php else: ?>
         <?php get_template_part('templates/register'); ?>
     <?php endif; ?>

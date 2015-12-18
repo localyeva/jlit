@@ -11,14 +11,4 @@
         </div>                   
     </div><!-- grid -->  
 </div>
-<div class="container-fluid" id="note">
-    <div>
-        <img src="<?php bloginfo('template_url'); ?>/assets/img/vir/note.jpg" alt="" style="width: 100%" class="img-responsive">
-    </div>
-</div>
-<div class="container-fluid" id="mnote">
-    <div>
-        <img src="<?php bloginfo('template_url'); ?>/assets/img/vir/m-note.jpg" alt="" style="width: 100%" class="img-responsive">
-    </div>
-</div>
 

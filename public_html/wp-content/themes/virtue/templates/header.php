@@ -47,6 +47,9 @@
                                 <a href="#message"> <?php echo $lang['m_voice']; ?></a>
                             </li>
                         </ul>
+                        <div id="language-flag-mobile">
+                            <?php echo qtranxf_generateLanguageSelectCode('image'); ?>
+                        </div>
                     </div><!--/.nav-collapse -->
                 </div>
             </nav>
@@ -109,7 +112,7 @@
                             </ul>
                             
                         </div>
-                        <div id="language_flag">
+                        <div id="language-flag">
                             <?php echo qtranxf_generateLanguageSelectCode('image'); ?>
                         </div>
                     </div>

@@ -1247,14 +1247,26 @@ a:hover > .bo-intro {
 */
 
 
-#language_flag {
+#language-flag, #language-flag-mobile {
     float:left;
 }
-#language_flag ul  li{
+#language-flag ul  li{
     display: inline;
 }
-#language_flag ul {
+#language-flag ul {
     margin: 10px;
     list-style-type: none;
     text-align: center;
+}
+
+#language-flag-mobile ul  li{
+    display: list-item;
+}
+#language-flag-mobile ul {
+    list-style-type: none;
+    text-align: center;
+}
+#language-flag-mobile ul li a{
+    padding: 0;
+    margin: 0;
 }
