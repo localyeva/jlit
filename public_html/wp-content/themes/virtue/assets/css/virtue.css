@@ -1260,13 +1260,32 @@ a:hover > .bo-intro {
 }
 
 #language-flag-mobile ul  li{
-    display: list-item;
+    display: inline;
 }
 #language-flag-mobile ul {
+    float: left;
     list-style-type: none;
     text-align: center;
+    padding: 0;
+    margin: 0;
+    background: none;
 }
 #language-flag-mobile ul li a{
     padding: 0;
     margin: 0;
+}
+
+.float-l{
+    float:left;
+}
+.float-r{
+    float:right;
+}
+
+.mobile-right{
+    float:right;
+}
+
+a.navbar-toggle {
+    margin-bottom:  0px !important;
 }
