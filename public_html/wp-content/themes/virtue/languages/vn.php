@@ -130,4 +130,29 @@
 	$lang['m_register_comment'] = "Ngày giờ thi chúng tôi sẽ thông báo qua email và sẽ gửi phiếu báo thi đến địa chỉ mà các bạn đã đăng kí";
 	$lang['m_news'] = "Tin tức";
 	$lang['m_test_level_expired'] = "JL2, JL3 đã hết hạn đăng ký";
+        
+        
+        //duych@evolableasia.vn
+        //templates/register.php
+        $lang['m_h1_free_register'] = "Đăng ký dự thi miễn phí ";
+        $lang['m_choose_location'] = "Chọn địa điểm";
+        $lang['m_choose_level'] = "Chọn trình độ";
+        $lang['m_placeholder_fullname'] = "Họ Tên";
+        $lang['m_placeholder_email'] = "Email";
+        $lang['m_placeholder_id_number'] = "Số CMND";
+        $lang['m_placeholder_cellphone'] = "Điện thoại";
+        $lang['m_label_level_and_time'] = "Cấp độ và thời gian thi";
+        $lang['m_label_location'] = "Địa điểm";
+        
+        //templates/slider.php
+        $lang['m_slider_h4_label'] = "Kì thi năng lực nhật ngữ cho chuyên ngành IT";
+        $lang['m_slider_en_banner'] = "Japanse literacy & IT Test(JLIT)";
+        $lang['m_slider_free_register'] = "Đăng ký miễn phí";
+        
+        //templates/what-jlit.php
+        $lang['m_what_jlit_knowledge'] = "Kiến thức ngôn ngữ";
+        $lang['m_what_jlit_listening'] = "Nghe hiểu";
+        
+        //templates/box-exam.php
+        $lang['m_h2_free_register_banner'] = "Hãy đăng ký tham gia kỳ thi miễn phí";
 ?>

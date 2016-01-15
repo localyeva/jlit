@@ -104,6 +104,9 @@ h6 {
     font-family: 'Roboto', sans-serif;
 }
 
+#side-nav {
+    float: left;
+}
 #side-nav a:hover{
     background-color: #BF1E2E;
     color: #ffffff;
@@ -1187,7 +1190,6 @@ a:hover > .bo-intro {
         padding-left: 53px;
     }
     .footer-top .padd-cent {
-        //padding-left: 57px;
     }
     .footer-top .img-right {
         margin-left: 95px;
@@ -1243,3 +1245,47 @@ a:hover > .bo-intro {
     }
 }
 */
+
+
+#language-flag, #language-flag-mobile {
+    float:left;
+}
+#language-flag ul  li{
+    display: inline;
+}
+#language-flag ul {
+    margin: 10px;
+    list-style-type: none;
+    text-align: center;
+}
+
+#language-flag-mobile ul  li{
+    display: inline;
+}
+#language-flag-mobile ul {
+    float: left;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+#language-flag-mobile ul li a{
+    padding: 0;
+    margin: 0;
+}
+
+.float-l{
+    float:left;
+}
+.float-r{
+    float:right;
+}
+
+.mobile-right{
+    float:right;
+}
+
+a.navbar-toggle {
+    margin-bottom:  0px !important;
+}

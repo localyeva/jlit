@@ -25,11 +25,11 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
         <div class="row learn-content">
             <div class="col-sm-6 right center">
                 <img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/8.png">
-                <p>Kiến thức ngôn ngữ</p>
+                <p><?php echo $lang['m_what_jlit_knowledge']; ?></p>
             </div>
             <div class="col-sm-6 center">
                 <img class="img1" alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/9.png">
-                <p>Nghe hiểu</p>
+                <p><?php echo $lang['m_what_jlit_listening']; ?></p>
             </div>
         </div>
 </div>

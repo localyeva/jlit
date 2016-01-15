@@ -3,24 +3,24 @@
     <div>
         <img class="img-responsive" style="width: 100%" src="<?php bloginfo('template_url'); ?>/assets/img/vir/bg1.png" alt="">
     </div>
-    <h1 class="text-center regis">Đăng ký dự thi miễn phí</h1>
+    <h1 class="text-center regis"><?php echo $lang['m_h1_free_register']; ?></h1>
     <div class="container bg1 mar-bt-100">
         <form class="form-horizontal" role="form" id="confirm" action="<?php bloginfo('siteurl') ?>?json=confirm" method="POST">
             <div class="row mar-bt-20">
                 <div class="col-md-12 col-xs-12">
                     <div class="form-group">
-                        <input id="fullname" name="fullname" type="text" class="form-control" placeholder="Họ Tên" aria-describedby="basic-addon1">
+                        <input id="fullname" name="fullname" type="text" class="form-control" placeholder="<?php echo $lang['m_placeholder_fullname']; ?>" aria-describedby="basic-addon1">
                     </div>
                     <div class="form-group">
-                        <input id="email" name="email" type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+                        <input id="email" name="email" type="text" class="form-control" placeholder="<?php echo $lang['m_placeholder_email']; ?>" aria-describedby="basic-addon1">
                     </div>
                 </div>
                 <div class="col-md-12 col-xs-12">
                     <div class="form-group">
-                        <input id="id_number" name="id_number" type="text" class="form-control" placeholder="Số CMND" aria-describedby="basic-addon1">
+                        <input id="id_number" name="id_number" type="text" class="form-control" placeholder="<?php echo $lang['m_placeholder_id_number']; ?>" aria-describedby="basic-addon1">
                     </div>                    
                     <div class="form-group">
-                        <input id="cellphone" name="cellphone" type="text" class="form-control" placeholder="Điện thoại" aria-describedby="basic-addon1">
+                        <input id="cellphone" name="cellphone" type="text" class="form-control" placeholder="<?php echo $lang['m_placeholder_cellphone']; ?>" aria-describedby="basic-addon1">
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                 </div>
                 <input type="hidden" id="class" name="test_level" value="-1">
             </div-->
-            <label>Chọn trình độ</label>
+            <label><?php echo $lang['m_choose_level']; ?></label>
             <div class="row text-center mar-bt-20" style="padding-bottom: 15px">                
                 <div id="class3" class="col-sm-4 add-info">
                     <h4><?php echo $lang['m_test_level_i3']; ?></h4>
@@ -52,7 +52,7 @@
                 </div>
                 <input type="hidden" id="class" name="test_level" value="-1">
             </div>
-            <label>Chọn địa điểm</label>
+            <label><?php echo $lang['m_choose_location']; ?></label>
             <div class="row text-center mar-bt-20">                
                 <div id="room1" class="col-sm-4 add-info">
                     <img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/location.png">
@@ -76,28 +76,28 @@
 
     <div style="display:none">
         <div class="container-fluid" id="register">
-            <h1 class="text-center regis" style="color: #000">Đăng ký dự thi miễn phí</h1>            
+            <h1 class="text-center regis" style="color: #000"><?php echo $lang['m_h1_free_register']; ?></h1>            
             <div class="container">
                 <form role="form" id="frmregister" action="<?php bloginfo('siteurl') ?>?json=register" method="POST">                    
                     <table class="table table-responsive confirm">
                         <tr>
-                            <th>Họ Tên</th>
+                            <th><?php echo $lang['m_placeholder_fullname']; ?></th>
                             <td id="cfullname"></td>
                         </tr>                        
                         <tr>
-                            <th>Email</th>
+                            <th><?php echo $lang['m_placeholder_email']; ?></th>
                             <td id="cemail"></td>
                         </tr>                        
                         <tr>
-                            <th>Số CMND</th>
+                            <th><?php echo $lang['m_placeholder_id_number']; ?></th>
                             <td id="cid_number"></td>
                         </tr>                        
                         <tr>
-                            <th>Điện thoại</th>
+                            <th><?php echo $lang['m_placeholder_cellphone']; ?></th>
                             <td id="ccellphone"></td>
                         </tr>
                         <tr>
-                            <th>Cấp độ và thời gian thi</th>
+                            <th><?php echo $lang['m_label_level_and_time']; ?></th>
                             <td id="">
                                 <div id="cclass3" style="display:none">
                                     <span><?php echo $lang['m_test_level_i3']; ?></span>
@@ -111,7 +111,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Địa điểm</th>
+                            <th><?php echo $lang['m_label_location']; ?></th>
                             <td id="">
                                 <div id="croom1" style="display:none">
                                     <?php echo $lang['m_tphcm']; ?>
