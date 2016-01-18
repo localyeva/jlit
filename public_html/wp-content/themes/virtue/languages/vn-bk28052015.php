@@ -1,4 +1,4 @@
-<?php	
+<?php
 	$lang['m_home_page'] = "Home";
 	$lang['m_what_is_jlit'] = "What's JLIT";
 	$lang['m_jlit_news'] = "News";
@@ -22,14 +22,14 @@
 	$lang['m_id_number'] = "Số CMND";
 	$lang['m_test_date'] = "Ngày Kiểm Tra";
 	$lang['m_first_test'] = "Kiểm tra lần 1";
-	$lang['m_second_test'] = "Kiểm tra lần 2";		
+	$lang['m_second_test'] = "Kiểm tra lần 2";
 	$lang['m_register'] = "Đăng ký";
 	$lang['m_register_locked'] = "Hết hạn đăng ký ";
 	$lang['m_register_form'] = "Đăng ký";
 
-	$lang['m_personal_information'] = "Thông tin cá nhân";	
-	$lang['m_professional_skills'] = "Trình độ chuyên môn";	
-	$lang['m_orther_information'] = "Thông tin khác";	
+	$lang['m_personal_information'] = "Thông tin cá nhân";
+	$lang['m_professional_skills'] = "Trình độ chuyên môn";
+	$lang['m_orther_information'] = "Thông tin khác";
 	$lang['m_other_language'] = "Ngôn ngữ khác";
 	$lang['m_full_name'] = "Họ tên";
 	$lang['m_date_of_birth'] = "Ngày sinh";
@@ -58,7 +58,7 @@
 	$lang['m_which_media_dit_you_know'] = "Bạn biết thông tin về bài kiểm tra năng lực Nhật ngữ trong chuyên ngành IT của công ty Evolable Asia qua phương tiện nào?";
 	$lang['m_thank_you'] = "Xin chân thành cảm ơn bạn đã đăng ký dự thi";
 	$lang['m_contact_later'] = "Chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất có thể";
-	$lang['m_next'] = "Tiếp theo";	
+	$lang['m_next'] = "Tiếp theo";
 	$lang['m_done'] = "Đăng ký";
 
 
@@ -66,29 +66,29 @@
 
 
 	$lang['m_intro_by_friend'] = "Bạn bè giới thiệu";
-	$lang['m_home'] = "Trang chủ";	
+	$lang['m_home'] = "Trang chủ";
 	$lang['m_privacy_policy'] = "Quy định bảo mật";
 	$lang['m_site_map'] = "Sơ đồ website";
-	
+
 	$lang['m_this_jlit_is_operated'] = "Trang web kiểm tra năng lực Nhật ngữ trong ngành IT được quản lý bởi công ty Evolable Asia và Vietnamworks.";
 	$lang['m_copyright'] = "Bản quyền thuộc về Evolable Asia / Vietnamworks";
 
 	$lang['m_content'] = "Nội dung";
 	$lang['m_send'] = "Gửi";
 	$lang['m_current_lang'] = "Ngôn ngữ hiện tại là tiếng Việt";
-	$lang['m_page_top'] = "Đầu trang";	
-	
-	$lang['m_slide_1'] = "Hướng tới mục tiêu bằng JLIT! Japanese Engineer, Comunicator";	
-	$lang['m_slide_2'] = "<b>JLIT</b> sẽ giúp lương của bạn tăng đến 30%";	
-	$lang['m_slide_3'] = "<b>JLIT</b> sẽ làm công ty Nhật chú ý đến bạn!";	
-	$lang['m_slide_4'] = "Quà bốc thăm trúng thưởng dành cho các bạn thi đậu <b>JLIT</b>";	
+	$lang['m_page_top'] = "Đầu trang";
+
+	$lang['m_slide_1'] = "Hướng tới mục tiêu bằng JLIT! Japanese Engineer, Comunicator";
+	$lang['m_slide_2'] = "<b>JLIT</b> sẽ giúp lương của bạn tăng đến 30%";
+	$lang['m_slide_3'] = "<b>JLIT</b> sẽ làm công ty Nhật chú ý đến bạn!";
+	$lang['m_slide_4'] = "Quà bốc thăm trúng thưởng dành cho các bạn thi đậu <b>JLIT</b>";
 	$lang['m_slide_5'] = "Thời gian đăng ký bắt đầu từ tháng <b>3/2015</b>";
 
 	$lang['m_timing'] = "Thời gian";
 	$lang['m_timing_content'] = "Ngày 18 và 19 tháng 10 2014";
 	$lang['m_3_times'] = "3 ca";
 	$lang['m_3_times_content'] = "JI3:8:30~10:30, JI2:11:00~13:00, JI1:14:00~15:50";
-	
+
 	$lang['m_preferred_first_time'] = "JI3(Sơ cấp):8:30~10:30";
 	$lang['m_preferred_second_time'] = "JI2(Trung cấp):11:00~13:00";
 	$lang['m_preferred_third_time'] = "JI1(Cao cấp):14:00~15:50";
@@ -100,7 +100,7 @@
 	$lang['m_preferred_third_time_hn'] = "JI1(Cao cấp):14:00~15:50";
 	$lang['m_preferred_first_date_hn'] = "20/04/2015";
 	$lang['m_preferred_second_date_hn'] = "21/04/2015";
-	
+
 	$lang['m_venue'] = "Địa điểm";
 	$lang['m_venue_content'] = "Vietnamworks Office";
 	$lang['m_venue_add'] = "130 Sương Nguyệt Ánh, Bến Thành, Quận 1, Tp.Hồ Chí Minh";
@@ -113,7 +113,7 @@
 	$lang['m_test_level_i1'] = "JI1(Cao cấp) :14:00~15:50";
 	$lang['m_test_level_i2'] = "JI2(Trung cấp) :11:00~13:00";
 	$lang['m_test_level_i3'] = "JI3(Sơ cấp) :8:30~10:30";
-	
+
 	$lang['m_user_address'] = "Địa chỉ";
 	$lang['m_preferred_date'] = "Chọn ngày";
 	$lang['m_preferred_time'] = "Chọn giờ";
