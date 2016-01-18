@@ -64,7 +64,7 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
 
 
     <div class="row no-mar mar-t-50">
-        <div class="col-sm-4 none-padd">            
+        <div class="col-sm-4 none-padd">
             <div class="intro-title"><a id="inline1" href="#target"><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/vir/arrow2.png">  <?php echo $p[1]['post_title']; ?></a></div>
             <a id="inline1" href="#target">
                 <div class="bo-intro">

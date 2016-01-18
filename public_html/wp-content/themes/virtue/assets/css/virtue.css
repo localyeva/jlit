@@ -2,7 +2,7 @@
 * Coding here
 */
 body {
-    position: relative; 
+    position: relative;
     background: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -228,11 +228,11 @@ h6 {
 }
 .time-class:hover, .time-class1:hover, .time-class2:hover {
     color: #ffffff;
-    background-color: #1A9BC1; 
+    background-color: #1A9BC1;
 }
 .time-class-active {
     color: #ffffff;
-    background-color: #1A9BC1;    
+    background-color: #1A9BC1;
 }
 h4 {
     font-weight: bold;
@@ -247,7 +247,7 @@ h4 {
 }
 .add-info-active {
     background-color: #1A9BC1;
-    color: #fff;    
+    color: #fff;
 }
 .add-info-mid {
     margin-right: 20px;
@@ -272,7 +272,7 @@ h4 {
     margin-bottom: 15px;
 }
 .regis-red:hover {
-    background: #ffa6a6; 
+    background: #ffa6a6;
     //border-color: fade(#FFF, 45%);
 }
 .btn.active, .btn:active {
@@ -391,13 +391,13 @@ h4 {
     border-radius: 5px;
 }
 .a-register a:hover {
-    background: #ffa6a6; 
+    background: #ffa6a6;
 }
 .intro-title > a:hover{
     color: #ffa6a6;
 }
 a:hover > .bo-intro {
-    background: #f5f5f5; 
+    background: #f5f5f5;
 }
 
 .a-register img {
@@ -412,7 +412,7 @@ a:hover > .bo-intro {
 
 .show-error{
     color: red;
-    padding-left: 5px; 
+    padding-left: 5px;
 }
 .success{
     color: blue;
@@ -488,7 +488,7 @@ a:hover > .bo-intro {
 /*END Footer */
 /*--------------------------------------------------------------------- import*/
 /*
-@media (max-width: 480px) {    
+@media (max-width: 480px) {
     .container {
         padding-left: 10px;
         padding-right: 10px;
@@ -637,7 +637,7 @@ a:hover > .bo-intro {
     background-color: #f2f2f2;
 }
 #mnote{
-    display: none;    
+    display: none;
 }
 .head-img {
     background: url("../img/vir/banner.png") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);
@@ -704,17 +704,17 @@ a:hover > .bo-intro {
         background: #fff;
         //line-height: 30px;
         height: 350px;
-        width: 230px;
+        width: 300px;
     }
     .nano .nano-content {
-        width: 250px;
+        width: 310px;
     }
     #fixed-sequence{
         height: 350px !important;
     }
     .bg-height {
         height: 350px !important;
-    }    
+    }
     .form-horizontal {
         margin: 10px 20px;
     }
@@ -777,7 +777,7 @@ a:hover > .bo-intro {
     .regis-red {
         font-size: 20px;
         margin: 0px;
-        min-width: 50px;        
+        min-width: 50px;
     }
     .regis-red:hover {
         color: #ffffff;
@@ -787,7 +787,7 @@ a:hover > .bo-intro {
         left: 23% !important;
         top: 30% !important;
     }
-    .text-left h4{        
+    .text-left h4{
         font-size: 16px !important;
         line-height: 30px !important;
     }
@@ -875,10 +875,10 @@ a:hover > .bo-intro {
 /* Mobile Menu */
 @media (max-width: 767px) {
     #mnote{
-        display: block;    
+        display: block;
     }
     #note{
-        display: none;    
+        display: none;
     }
 
     .form-horizontal .form-group {
@@ -956,7 +956,7 @@ a:hover > .bo-intro {
     .a-register {
         margin-top: 10px;
         height: 260px;
-        padding-top: 15px;        
+        padding-top: 15px;
     }
     .a-register h2{
         line-height: 40px;
@@ -981,7 +981,7 @@ a:hover > .bo-intro {
         left: 7%;
         font-size: 15px;
     }
-    .text-left h4{        
+    .text-left h4{
         font-size: 25px;
         line-height: 45px;
         margin-bottom: auto;
@@ -1025,7 +1025,7 @@ a:hover > .bo-intro {
     }
     .right {
         text-align: center;
-    }        
+    }
     .hei-menu {
         padding-left: 0px;
     }
@@ -1043,7 +1043,7 @@ a:hover > .bo-intro {
     .form-horizontal {
         margin-left: 10px;
         margin-right: 0px;
-    }    
+    }
 
     .pad-l-50 {
         padding-left: 55px;
@@ -1090,13 +1090,13 @@ a:hover > .bo-intro {
     .ip-smar p{
         height:35px;
         padding: 13px 15px;
-    }    
+    }
     .learn-content {
         margin-left: 0px;
         padding-left: 10px;
         //max-width: 600px;
         padding-bottom: 30px;
-        padding-top: 50px;        
+        padding-top: 50px;
     }
 
     .learn-content .col-sm-6.right{
@@ -1235,7 +1235,7 @@ a:hover > .bo-intro {
         margin-right: 10px;
     }
 }
-@media (min-width: 1200px) and (max-width: 1300px) {    
+@media (min-width: 1200px) and (max-width: 1300px) {
     .format-stand {
         left: 14%;
         padding-bottom: 5%;
