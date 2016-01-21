@@ -76,9 +76,30 @@ $limit = 100; ?>
                     <h4 class="modal-title" id="myModalLabel"><img alt="<?php echo $p[2]['post_id']; ?>" src="<?php echo $p[2]['post_thumnail']; ?>" class="img-responsive"></h4>
                 </div>
                 <div class="modal-body text-format">
-                    <?php echo $p[2]['post_content']; ?>
+                  <?php
+                    // $post_id=176;
+                    $lang = $_REQUEST['lang'];
+                    if ($lang == 'ja'):
+                     //japanese
+                    ?>
+                    <?php
+                    // $post_id=180;
+
+                    //  echo $p[2]['post_id'];
+                    //  echo $p[2]['post_content'];
+                     var_dump($p);
+                     ?>
+                  <?php else: ?>
+                    <?php
+                    // echo $p[2]['post_content'];
+                    // echo $p=176;
+                     var_dump($p);
+                    ?>
+
+                  <?php endif ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-- http://jlit.localhost/ -->

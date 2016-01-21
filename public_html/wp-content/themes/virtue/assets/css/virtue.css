@@ -640,7 +640,10 @@ a:hover > .bo-intro {
     display: none;
 }
 .head-img {
-    background: url("../img/vir/banner.png") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);
+    /*background: url("../img/vir/banner.png") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);*/
+   position: absolute;
+   z-index: -1;
+   width: 100%;
 }
 /*
 .note-img {
@@ -652,7 +655,7 @@ a:hover > .bo-intro {
     width: 100%;
 }*/
 .bg-height {
-    height: 400px;
+    height: 718px;
     position: relative;
 }
 .grid-pad {
@@ -672,7 +675,7 @@ a:hover > .bo-intro {
     top: 16%;
     max-width: 95%;
     text-shadow: none;
-    text-transform: uppercase;
+    text-transform: inherit;
     text-align: center;
 }
 .text-left h4 {
@@ -710,10 +713,10 @@ a:hover > .bo-intro {
         width: 310px;
     }
     #fixed-sequence{
-        height: 350px !important;
+        height: 156px !important;
     }
     .bg-height {
-        height: 350px !important;
+        height: 0px !important;
     }
     .form-horizontal {
         margin: 10px 20px;
@@ -986,7 +989,10 @@ a:hover > .bo-intro {
         line-height: 45px;
         margin-bottom: auto;
     }
-
+    .bg-height {
+    height: 268px;
+    position: relative;
+}
     .format-stand {
         left: 7%;
         top: 5%;
@@ -1232,7 +1238,7 @@ a:hover > .bo-intro {
     }
     .add-info-mid {
         margin-left: 10px;
-        margin-right: 10px;
+      657  margin-right: 10px;
     }
 }
 @media (min-width: 1200px) and (max-width: 1300px) {
