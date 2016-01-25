@@ -279,7 +279,7 @@ h4 {
     color: #ffffff;
 }
 .modal-content{
-    max-width: 900px;
+    max-width: 970px;
 }
 /* Limit practice */
 .content {
@@ -610,12 +610,12 @@ a:hover > .bo-intro {
     border: 1px solid #D3D3D3;
     background: #fff;
     //line-height: 30px;
-    height: 400px;
-    width: 600px;
+    height: 550px;
+    width: 970px;
 }
 .nano .nano-content {
     padding-right: 20px;
-    width: 620px;
+    width: 970px;
 }
 .nano .nano-pane {
     background: f1f1f1;
