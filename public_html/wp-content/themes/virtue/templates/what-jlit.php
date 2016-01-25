@@ -56,7 +56,13 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
         <span><span class="tit_head"><?php echo $scope[2]['post_title']; ?></span> - Sơ cấp</span>
       </div>
       <div class="body-red">
-        <p><?php echo $scope[2]['post_content']; ?></p>
+        <!-- <p><?php echo $scope[2]['post_content']; ?></p> -->
+          <?php $lang = $_REQUEST['lang']; if ($lang == 'ja')://japanese  ?>
+            <?php _e("<!--:ja-->" . $scope[2]['post_content'] . "<!--:-->");?>
+          <?php else: ?>
+            <?php _e("<!--:vi-->" . $scope[2]['post_content'] . "<!--:-->");    ?>
+          <?php endif ?>
+
       </div>
     </div>
   </div>

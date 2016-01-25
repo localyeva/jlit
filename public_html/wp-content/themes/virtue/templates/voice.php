@@ -24,7 +24,7 @@ $limit = 100; ?>
                     <h4 class="modal-title" id="myModalLabel"><img alt="<?php echo $p[0]['post_id']; ?>" src="<?php echo $p[0]['post_thumnail']; ?>"></h4>
                 </div>
                 <div class="modal-body text-format">
-                    <?php $lang = $_REQUEST['lang']; if ($lang == 'ja')://japanese  ?>
+                  <?php $lang = $_REQUEST['lang']; if ($lang == 'ja')://japanese  ?>
                     <?php _e("<!--:ja-->" . $p[0]['post_content'] . "<!--:-->");    ?>
                   <?php else: ?>
                     <?php _e("<!--:vi-->" . $p[0]['post_content'] . "<!--:-->");    ?>
@@ -54,8 +54,8 @@ $limit = 100; ?>
                     <h4 class="modal-title" id="myModalLabel"><img alt="<?php echo $p[1]['post_id']; ?>" src="<?php echo $p[1]['post_thumnail']; ?>"></h4>
                 </div>
                 <div class="modal-body text-format">
-                    <?php $lang = $_REQUEST['lang']; if ($lang == 'ja')://japanese  ?>
-                    <?php _e("<!--:ja-->" . $p[1]['post_content'] . "<!--:-->");    ?>
+                  <?php $lang = $_REQUEST['lang']; if ($lang == 'ja')://japanese  ?>
+                    <?php _e("<!--:ja-->" . $p[1]['post_content'] . "<!--:-->");?>
                   <?php else: ?>
                     <?php _e("<!--:vi-->" . $p[1]['post_content'] . "<!--:-->");    ?>
                   <?php endif ?>
