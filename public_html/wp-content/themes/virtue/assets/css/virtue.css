@@ -1127,6 +1127,10 @@ a:hover > .bo-intro {
         padding-top: 50px;
         padding-left: 70px;
     }
+     #voice_content3 img, #voice_content2 img, #voice_content1 img{
+        width: 100px;
+        height: 100px;
+    }
 }
 
 @media (min-width: 768px) {
