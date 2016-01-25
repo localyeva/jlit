@@ -24,17 +24,3 @@
     </div>
   </div><!-- grid-->
 </div>
-
-<!-- <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="<?php bloginfo('template_url'); ?>/assets/img/vir/slide1.jpg" alt="Chania" class="img-responsive " width="100%" />
-        </div>
-        <div class="item">
-            <img src="<?php bloginfo('template_url'); ?>/assets/img/vir/slide2.jpg" alt="Flower" class="img-responsive " width="100%"/>
-        </div>
-        <div class="item">
-            <img src="<?php bloginfo('template_url'); ?>/assets/img/vir/slide3.jpg" alt="Flower" class="img-responsive " width="100%"/>
-        </div>
-    </div>
-</div> -->

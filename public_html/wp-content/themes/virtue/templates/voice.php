@@ -24,7 +24,11 @@ $limit = 100; ?>
                     <h4 class="modal-title" id="myModalLabel"><img alt="<?php echo $p[0]['post_id']; ?>" src="<?php echo $p[0]['post_thumnail']; ?>"></h4>
                 </div>
                 <div class="modal-body text-format">
-                    <?php echo $p[0]['post_content']; ?>
+                    <?php $lang = $_REQUEST['lang']; if ($lang == 'ja')://japanese  ?>
+                    <?php _e("<!--:ja-->" . $p[0]['post_content'] . "<!--:-->");    ?>
+                  <?php else: ?>
+                    <?php _e("<!--:vi-->" . $p[0]['post_content'] . "<!--:-->");    ?>
+                  <?php endif ?>
                 </div>
             </div>
         </div>
@@ -50,7 +54,11 @@ $limit = 100; ?>
                     <h4 class="modal-title" id="myModalLabel"><img alt="<?php echo $p[1]['post_id']; ?>" src="<?php echo $p[1]['post_thumnail']; ?>"></h4>
                 </div>
                 <div class="modal-body text-format">
-                    <?php echo $p[1]['post_content']; ?>
+                    <?php $lang = $_REQUEST['lang']; if ($lang == 'ja')://japanese  ?>
+                    <?php _e("<!--:ja-->" . $p[1]['post_content'] . "<!--:-->");    ?>
+                  <?php else: ?>
+                    <?php _e("<!--:vi-->" . $p[1]['post_content'] . "<!--:-->");    ?>
+                  <?php endif ?>
                 </div>
             </div>
         </div>
@@ -76,26 +84,10 @@ $limit = 100; ?>
                     <h4 class="modal-title" id="myModalLabel"><img alt="<?php echo $p[2]['post_id']; ?>" src="<?php echo $p[2]['post_thumnail']; ?>" class="img-responsive"></h4>
                 </div>
                 <div class="modal-body text-format">
-                  <?php
-                    // $post_id=176;
-                    $lang = $_REQUEST['lang'];
-                    if ($lang == 'ja'):
-                     //japanese
-                    ?>
-                    <?php
-                    // $post_id=180;
-
-                    //  echo $p[2]['post_id'];
-                    //  echo $p[2]['post_content'];
-                     var_dump($p);
-                     ?>
+                  <?php $lang = $_REQUEST['lang']; if ($lang == 'ja')://japanese  ?>
+                    <?php _e("<!--:ja-->" . $p[2]['post_content'] . "<!--:-->");    ?>
                   <?php else: ?>
-                    <?php
-                    // echo $p[2]['post_content'];
-                    // echo $p=176;
-                     var_dump($p);
-                    ?>
-
+                    <?php _e("<!--:vi-->" . $p[2]['post_content'] . "<!--:-->");    ?>
                   <?php endif ?>
                 </div>
             </div>
@@ -103,3 +95,4 @@ $limit = 100; ?>
     </div>
 </div>
 <!-- http://jlit.localhost/ -->
+<!-- Array ( [0] => Array ( [0] => [:ja] tieng nhat [:] ) [1] => Array ( [0] => tieng nhat ) ) -->
