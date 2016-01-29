@@ -8,5 +8,8 @@
             <file>file:/var/www/bo/jlit/public_html/wp-content/themes/virtue/base.php</file>
             <file>file:/var/www/bo/jlit/public_html/wp-content/themes/virtue/templates/header.php</file>
         </group>
+        <group name="EVA">
+            <file>file:/var/www/html/jlit.localhost/public_html/wp-config.php</file>
+        </group>
     </open-files>
 </project-private>
