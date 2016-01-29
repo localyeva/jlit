@@ -26,13 +26,15 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </a>
+                <div id="language-flag-mobile">
+                  <?php echo qtranxf_generateLanguageSelectCode('image'); ?>
+                </div>
               </div>
               <div style="clear: both;"></div>
-              <div id="language-flag-mobile">
-                <?php echo qtranxf_generateLanguageSelectCode('image'); ?>
-              </div>
+
             </div>
           </div>
+
           <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="navbar">
               <ul class="nav navbar-nav">
                   <li>

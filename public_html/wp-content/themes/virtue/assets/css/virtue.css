@@ -713,7 +713,10 @@ a:hover > .bo-intro {
         width: 310px;
     }
     #fixed-sequence{
-        height: 156px !important;
+        height: 197px !important;
+    }
+    .carousel-inner>.item>a>img, .carousel-inner>.item>img{
+      height: 200px !important;
     }
     .bg-height {
         height: 0px !important;
@@ -800,6 +803,7 @@ a:hover > .bo-intro {
     }
     .text-left .frame{
         padding-bottom: 20px !important;
+        width: 170px;
     }
     .format-stand {
         max-width: 41%;
@@ -1259,6 +1263,8 @@ a:hover > .bo-intro {
 
 #language-flag, #language-flag-mobile {
     float:left;
+    padding-top: 27px;
+    margin-right: 10px;
 }
 #language-flag ul  li{
     display: inline;
