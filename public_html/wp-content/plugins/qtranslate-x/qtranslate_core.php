@@ -502,7 +502,7 @@ function qtranxf_front_header_css_default(){
 	global $q_config;
 	$flag_location=qtranxf_flag_location();
 	$css = '';
-	foreach($q_config['enabled_languages'] as $lang) 
+	foreach($q_config['enabled_languages'] as $lang)
 	{
 		$css .= '.qtranxs_flag_'.$lang.' {background-image: url('.$flag_location.$q_config['flag'][$lang].'); background-repeat: no-repeat;}'.PHP_EOL;
 	}
@@ -715,10 +715,10 @@ function qtranxf_strftime($format, $date, $default = '', $before = '', $after = 
 	$day = intval(ltrim(strftime("%d",$date),'0'));
 	$search = array();
 	$replace = array();
-	
+
 	// date S
 	$search[] = '/(([^%])%q|^%q)/';
-	if($day==1||$day==21||$day==31) { 
+	if($day==1||$day==21||$day==31) {
 		$replace[] = '$2st';
 	} elseif($day==2||$day==22) {
 		$replace[] = '$2nd';
@@ -727,7 +727,7 @@ function qtranxf_strftime($format, $date, $default = '', $before = '', $after = 
 	} else {
 		$replace[] = '$2th';
 	}
-	
+
 	$search[] = '/(([^%])%E|^%E)/'; $replace[] = '${2}'.$day; // date j
 	$search[] = '/(([^%])%f|^%f)/'; $replace[] = '${2}'.date('w',$date); // date w
 	$search[] = '/(([^%])%F|^%F)/'; $replace[] = '${2}'.date('z',$date); // date z
@@ -834,7 +834,7 @@ function qtranxf_use_term($lang, $obj, $taxonomy) {
 		if(isset($q_config['term_name'][$obj->name][$lang])) {
 			//qtranxf_dbg_echo('qtranxf_translate_term: object: ',$obj,true);
 			$obj->name = $q_config['term_name'][$obj->name][$lang];
-		} 
+		}
 	} elseif(isset($q_config['term_name'][$obj][$lang])) {
 		//qtranxf_dbg_echo('qtranxf_translate_term: string: ',$obj,true);
 		$obj = $q_config['term_name'][$obj][$lang];

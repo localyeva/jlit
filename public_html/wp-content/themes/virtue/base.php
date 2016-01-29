@@ -18,16 +18,16 @@ if ($_REQUEST['lang'] == 'ja') {
 <?php
 do_action('get_header');
 get_template_part('templates/header');
-?>  
-<div class="wrap content" role="document">    
+?>
+<div class="wrap content" role="document">
     <?php get_template_part('templates/slider'); ?>
-    
-    <?php 
+
+    <?php
     //slider-note
     get_template_part('templates/slider-note');
     //end slider-note
     ?>
-    
+
     <?php if(function_exists('get_virtue_child_notification_check') && get_virtue_child_notification_check()): ?>
     <?php get_template_part('templates/notification'); ?>
     <?php else: ?>
@@ -61,13 +61,13 @@ get_template_part('templates/header');
         get_template_part('templates/box-exam');
     }
     ?>
-    <?php //include kadence_template_path();  ?>            
+    <?php //include kadence_template_path();  ?>
     <?php if (kadence_display_sidebar()) : ?>
         <aside class="<?php echo kadence_sidebar_class(); ?> kad-sidebar" role="complementary">
             <div class="sidebar">
         <?php //include kadence_sidebar_path();  ?>
             </div>
-        </aside><
+        </aside>
 <?php endif; ?>
 </div>
 </div>
