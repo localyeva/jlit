@@ -94,5 +94,3 @@ $limit = 100; ?>
         </div>
     </div>
 </div>
-<!-- http://jlit.localhost/ -->
-<!-- Array ( [0] => Array ( [0] => [:ja] tieng nhat [:] ) [1] => Array ( [0] => tieng nhat ) ) -->

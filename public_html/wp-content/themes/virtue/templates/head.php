@@ -25,9 +25,17 @@
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/show.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/jquery.validate.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/css/font-awesome/css/font-awesome.css" />
+
           <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/css/back-to-top-style.css" />
           <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/datetimepicker/jquery.datetimepicker.css" />
           <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/fancybox/jquery.fancybox.css" />
           <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/nanoscroller/nanoscroller.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/css/virtue.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/jquery.heightLine.js"></script>
+      <script>
+        $(function(){
+          $(".body-red>div").heightLine();
+        });
+  </script>
 </head>

@@ -45,12 +45,13 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
         <span><span class="tit_head"><?php echo $scope[0]['post_title']; ?></span> - Cao cấp</span>
       </div>
       <div class="body-red">
-        <!-- <p><?php echo $scope[0]['post_content']; ?></p> -->
-        <?php $lang = $_REQUEST['lang']; if ($lang == 'ja')://japanese  ?>
-            <p><?php _e("<!--:ja-->" . $scope[0]['post_content'] . "<!--:-->");?></p>
-          <?php else: ?>
-            <p><?php _e("<!--:vi-->" . $scope[0]['post_content'] . "<!--:-->");    ?></p>
-          <?php endif ?>
+        <div>
+          <?php $lang = $_REQUEST['lang']; if ($lang == 'ja')://japanese  ?>
+              <p><?php _e("<!--:ja-->" . $scope[0]['post_content'] . "<!--:-->");?></p>
+            <?php else: ?>
+              <p><?php _e("<!--:vi-->" . $scope[0]['post_content'] . "<!--:-->");    ?></p>
+            <?php endif ?>
+        </div>
       </div>
     </div>
     <div class="col-sm-4 none-padd">
@@ -58,11 +59,13 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
         <span><span class="tit_head"><?php echo $scope[1]['post_title']; ?></span> - Trung cấp</span>
       </div>
       <div class="body-red">
-        <?php $lang = $_REQUEST['lang']; if ($lang == 'ja')://japanese  ?>
-            <p><?php _e("<!--:ja-->" . $scope[1]['post_content'] . "<!--:-->");?></p>
-          <?php else: ?>
-            <p><?php _e("<!--:vi-->" . $scope[1]['post_content'] . "<!--:-->");    ?></p>
-          <?php endif ?>
+        <div>
+          <?php $lang = $_REQUEST['lang']; if ($lang == 'ja')://japanese  ?>
+              <p><?php _e("<!--:ja-->" . $scope[1]['post_content'] . "<!--:-->");?></p>
+            <?php else: ?>
+              <p><?php _e("<!--:vi-->" . $scope[1]['post_content'] . "<!--:-->");    ?></p>
+            <?php endif ?>
+        </div>
       </div>
     </div>
     <div class="col-sm-4 none-padd">
@@ -70,13 +73,13 @@ $scope = j_get_post(J_CATE_SCOPE_EXAM);
         <span><span class="tit_head"><?php echo $scope[2]['post_title']; ?></span> - Sơ cấp</span>
       </div>
       <div class="body-red">
-        <!-- <p><?php echo $scope[2]['post_content']; ?></p> -->
+        <div>
           <?php $lang = $_REQUEST['lang']; if ($lang == 'ja')://japanese  ?>
             <p><?php _e("<!--:ja-->" . $scope[2]['post_content'] . "<!--:-->");?></p>
           <?php else: ?>
             <p><?php _e("<!--:vi-->" . $scope[2]['post_content'] . "<!--:-->");    ?></p>
           <?php endif ?>
-
+        </div>
       </div>
     </div>
   </div>
