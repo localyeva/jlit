@@ -1,4 +1,4 @@
-<?php $lang = $_SESSION['lang']; ?>
+$lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : '';
 
 <div class="container content" id="what-jlit">
     <div  class="row mar-t-150">

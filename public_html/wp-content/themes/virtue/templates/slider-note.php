@@ -1,5 +1,5 @@
 <?php
-    $lang = $_REQUEST['lang'];
+    $lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : '';
     if ($lang == 'ja'):
         //japanese
     ?>

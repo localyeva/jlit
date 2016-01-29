@@ -6,7 +6,7 @@ if (is_404()) {
 <?php
 $language_file = 'languages/vn.php';
 $current_language = '';
-if ($_REQUEST['lang'] == 'ja') {
+if (isset($_REQUEST['lang']) && $_REQUEST['lang'] == 'ja') {
     $language_file = 'languages/ja.php';
 }
 ?>
