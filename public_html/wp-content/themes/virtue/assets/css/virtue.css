@@ -898,6 +898,10 @@ a:hover > .bo-intro {
     }
     .text-left img {
         margin-top: 0px;
+        margin-left: 5px;
+    }
+    .carousel-inner>.item>a>img, .carousel-inner>.item>img{
+      height: 270px !important;
     }
     .head-img {
         background: url("../img/vir/mbanner.png") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);
@@ -985,7 +989,7 @@ a:hover > .bo-intro {
         font-size: 35px;
     }
     .text-left {
-        left: 7%;
+        left: 24%;
         font-size: 15px;
     }
     .text-left h4{
